@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <title>22.	Make a simple calculator using switch case</title>
+</head>
+<body>
+    <h1>22.	Make a simple calculator using switch case.
+        a.	1.Addition
+        b.	2.Subtraction
+        c.	3.Multiplication
+        d.	4.Division
+        </h1>
+    <script type="text/javascript">
+    {
+        var no1=prompt("Enter Number");
+        var no2=prompt("Enter Number");
+        var choice=prompt("Enter Your Choice  1 - Addition  2 - Substration  3 - Divide  4 - multiplication");
+        switch(choice)
+        {
+            
+            case '1':
+                sum= parseInt(no1)+ parseInt(no2);
+                document.write(" "+ sum);
+            break;
+            case '2':
+                sum= parseInt(no1)- parseInt(no2);
+                document.write(" "+ sum);
+            break;
+            case '3':
+                sum= parseInt(no1)/ parseInt(no2);
+                document.write(" "+ sum);
+            break;
+            case '4':
+                sum= parseInt(no1)* parseInt(no2);
+                document.write(" "+ sum);
+            break;
+            default:document.write("Wrong choice");
+        }
+
+    }
+    </script>
+</body>
+</html>
