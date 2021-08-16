@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>mouse over and out</title>
+</head>
+<body>
+    <h5>onmouseover and onmouseout</h5>
+
+    <script type="text/javascript">
+        function bigimg(x)
+        {
+        x.style.height="80px";
+        x.style.width="80px";
+        }
+        function smallimg(x)
+        {
+        x.style.height="30px";
+        x.style.width="30px";
+        }
+        </script>
+        <img src="admin.jpg" height="40px" width="40px"
+        onmouseover="bigimg(this)"
+        onmouseout="smallimg(this)">
+    </script>    
+</body>
+</html>

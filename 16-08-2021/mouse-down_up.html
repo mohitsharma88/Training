@@ -1,0 +1,20 @@
+<html>
+<head>
+<script type="text/javascript">
+    function big(x)
+    {
+        x.style.backgroundColor="orange";
+        x.style.fontSize="100px";
+        x.innerHTML = "Release Me";
+    }   
+    function small(x)
+    {
+        x.style.backgroundColor="gold";
+        x.style.fontSize="50px";
+        x.innerHTML = "click me";   
+    }
+</script>
+</head>
+<body>
+<div onmousedown="big(this)" onmouseup="small(this)">Hello World</div>
+</body>

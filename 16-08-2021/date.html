@@ -1,0 +1,18 @@
+<html>
+<head>
+<script type="text/javascript">
+    function disp_date()
+    {
+        var d=new Date();
+        var dd,mm,yy;
+        dd=d.getDate();
+        mm=d.getMonth()+1;
+        yy=d.getFullYear();
+        document.write(dd+"-"+mm+"-"+yy+"<br>");
+        document.write(d);
+    }
+</script>
+</head>
+<body onLoad="disp_date()">
+</body>
+</html>
