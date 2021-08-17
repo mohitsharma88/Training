@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <h4>Get Value of Form</h4>
+</head>
+<body>
+    <script type="text/javascript">
+        function getnumber()
+        {
+            var number=document.getElementById("number").value;
+            alert(number);
+        }
+    </script>
+     <form>
+         Enter No:<input type="text" id="number" name="number"/><br/>
+        <input type="button" value="click" onclick="getnumber()"/>
+    </form>
+</body>
+</html>
