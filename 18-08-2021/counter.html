@@ -1,0 +1,46 @@
+<!-- <html>
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+        var button = document.getElementById("click");
+        count = 0;
+        button.onclick = function()
+        {
+            count += 1;
+            button.innerHTML = "Click me: " + count;
+        }
+    
+</script>
+</head>
+<body>
+    <h3>Click Counter</h3>
+    <button id="click">Click me: 0</button>
+</body>
+</html> -->
+<html>
+    <head>
+        <script>
+            function counter()
+            {
+                var count = parseInt(document.getElementById('count').value);
+                count++;
+                document.getElementById("count").value = count; 
+                console.log(count);
+            }
+            function rcounter()
+            {
+                var rcount = parseInt(document.getElementById('rcount').value);
+                rcount--;
+                document.getElementById("rcount").value=rcount;
+                console.log(rcount);
+            }
+        </script>
+    </head>
+    <body align="center">
+        <input type="number" id="count" name="count" value = "0" /> Increment
+        <button value="Click" onclick = "counter()" >Click me</button> <br><br>
+        <input type="number" id="rcount" namr="rcount" value="0" />Decrement
+        <button type="click" onclick="rcounter()" >Click me</button>
+    </body>
+</html>

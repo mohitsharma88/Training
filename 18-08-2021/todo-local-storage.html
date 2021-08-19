@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="text" id="input" placeholder="Enter Here">
+        <button onclick="todo()">Click Me</button>
+        
+    <script>
+        let x = 0;
+        const array = Array();
+        function todo()
+        {
+            array[x] = document.getElementById("input").value;
+            if(array[x] != "")
+            { 
+                 localStorage.setItem(x, JSON.stringify(array[x]));
+                 x++;
+                 document.getElementById("input").value="";
+            }
+            else 
+            {
+                document.getElementById("list").appendChild(document.createElement(""));
+            }
+        }
+
+        function clean()
+        {
+            localStorage.clear();
+            x=0;
+        }
+    </script>
+
+</body>
+</html>

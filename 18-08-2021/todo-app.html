@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title>Todo App</title>
+</head>
+
+<body>
+    <br>
+    <fieldset>
+        <legend>Todo App</legend>
+
+        <input type="text" id="item" style="margin-top: 47px; height: 47px; width: 67%; font-size: large;">
+        <input type="button" value="Add Item" onclick="addvalue()" style="width: 17%; height: 37px; margin-left: 17px; font-size: 17px;">
+        <span id="invalid"></span>
+
+    </fieldset>
+    <script type="text/javascript">
+
+        n = 0;
+        arr = Array();
+
+        function addvalue() {
+            arr[n] = document.getElementById('item').value;
+
+            if (arr[n] != '') {
+                b = '<br/>';
+
+                for (i = 0; i < arr.length; i++) {
+                    b = b + arr[i] + '<br/>';
+                }
+
+                document.getElementById('invalid').innerHTML = b;
+                n++;
+                document.getElementById('item').value = '';
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
