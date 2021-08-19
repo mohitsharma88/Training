@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <body style="text-align: center" >
+            <p>
+                <image id="base" src="dennis.jpeg" alt="img"></image>
+            </p>
+       
+        <script>
+        function image()
+        {
+            document.getElementById('base').src = "dennis.jpeg";
+        }
+        function quote()
+        {
+            document.getElementById('base').src = "quotes.jpg";
+        }
+        function quote2()
+        {
+            document.getElementById('base').src = "quote2.png";
+        }
+        document.getElementById('base').addEventListener('mouseover',image);
+        document.getElementById('base').addEventListener('mouseout',quote);   
+        document.getElementById('base').addEventListener('dblclick',quote2);
+        </script>
+        </body>
+    </head>
+</body>
+</html>

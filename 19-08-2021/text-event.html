@@ -1,0 +1,60 @@
+
+
+<html>
+
+    <body>
+    
+        <div id="div2">
+            <p id="p1">Welcome to the Webcodegenie</p> <br><br>
+            <p id="p2">Welcome to the Webcodegenie</p><br><br>
+            <p id="p3">Welcome to the Webcodegenie</p><br><br>
+            <p id="p4">Welcome to the Webcodegenie</p><br><br>
+
+        </div>
+    
+        <script type="text/javascript">
+    
+            document.getElementById('div2').addEventListener('mouseup', content1)
+            function content1() {
+                document.getElementById('p1').innerHTML = 'Webcodegenie is top in Ahmedabad';
+                document.getElementById('p2').style.color = 'Orange';
+                document.getElementById('p3').style.fontSize = 'xx-large';
+                document.getElementById('p4').style.backgroundColor = 'skyblue';
+            }
+    
+            document.getElementById('div2').addEventListener('mousedown', content2)
+            function content2() {
+                document.getElementById('p1').innerHTML = ' No-Text';
+                document.getElementById('p2').style.color = 'red';
+                document.getElementById('p3').style.fontSize = 'x-large';
+                document.getElementById('p4').style.backgroundColor = 'yellow';
+            }
+    
+        </script>
+    
+    </body>
+    
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <body style="text-align: center" >
+            <p id="content1"> Hello All</p><br> 
+            <p id="content2">Hello World</p><br>
+        <script>
+        function fun1()
+        {
+            document.getElementById('content1').style.backgroundColor="red";
+        }
+        function fun2()
+        {
+            document.getElementById('base').src = "quotes.jpg";
+        }
+        document.getElementById('content1').addEventListener('mouseover',fun1);
+        document.getElementById('content2').addEventListener('mouseout',fun2);   
+        </script>
+        </body>
+    </head>
+</body>
+</html> -->

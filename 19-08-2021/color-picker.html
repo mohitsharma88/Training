@@ -1,0 +1,25 @@
+<html>
+<head>
+    <style>
+        #mydiv
+        {
+            background-color: rgb(158, 209, 38);
+            width: 500px;
+            height: 100px;
+            margin-left: 35%;
+        }
+    </style>
+</head>
+  
+<body align="center">
+    <div align="center" id="mydiv" onclick="changeColor()"></div>
+    <input name="ColorPicker" type="color" id="ColorPicker" align="center" />
+    <script>
+        function changeColor() 
+        {
+            document.getElementById("mydiv").style.backgroundColor = document.getElementById("ColorPicker").value;
+        }
+    </script>
+</body>
+  
+</html>

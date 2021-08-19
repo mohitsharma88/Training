@@ -1,0 +1,32 @@
+
+<html>
+  <head>
+      <body align="center">
+          <form>
+          <fieldset>
+              <legend>Timer</legend>
+              <p id="demo">20</p>
+              <button onclick="clock()"><b>Start</b></button>
+              <button onclick="clearInterval(myTimer)"><b>Stop</b> </button>
+              <script>
+                  var myTimer;
+                  function clock()
+                  {
+                      myTimer = setInterval(myClock, 1000);
+                      var c = 20;
+
+                      function myClock()
+                      {
+                          document.getElementById("demo").innerHTML = --c;
+                          if (c == 0)
+                          {
+                              clearInterval(myTimer);
+                          }
+                      }
+                  }
+              </script>
+          </fieldset>
+      </form>
+      </body>
+  </head>
+</html>

@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+         fieldset {
+            text-align: left;
+            font-size: x-large;
+            padding-top: 15px;
+            width: 30%;
+        }
+    
+    </style>
+</head>
+<body>
+    <center>
+            <form id="form">
+                First Name  <input type="text" id="tb1" required><br><br>
+                Middle Name  <input type="text" id="tb2" required><br><br>
+                Last Name  <input type="text" id="tb3" required><br><br>
+                SSC Collage Name  <input type="text" id="sname" required><br><br>
+                HSC College Name  <input type="text" id="hname" required><br><br>
+                University Name  <input type="text" id="uname" required><br><br>
+                City Name  <input type="text" id="cname" required><br><br>
+                District Name  <input type="text" id="dname" required><br><br>
+                Zipcode  <input type="number" id="zname" required><br><br>
+                Address  <input type="text" id="aname" required><br><br>
+                <input type="submit" value="Submit">
+            </form>
+    </center>
+
+    <script type="text/javascript">
+
+        document.getElementById('form').addEventListener('mouseup', name1);
+        function name1() {
+            document.getElementById('tb1').style.color = 'orange';
+            var a = document.getElementById('tb1');
+            a.value = a.value.toUpperCase();
+        }
+
+        document.getElementById('form').addEventListener('mousedown', name2);
+        function name2() {
+            document.getElementById('tb2').style.color = 'red';
+            var b = document.getElementById('tb2');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('form').addEventListener('mouseover', name3);
+        function name3() {
+            document.getElementById('tb3').style.color = 'orange';
+            var b = document.getElementById('lname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('form').addEventListener('mouseout', name4);
+        function name4() {
+            document.getElementById('sname').style.color = 'red';
+            var b = document.getElementById('sname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('form').addEventListener('click', name5);
+        function name5() {
+            document.getElementById('hname').style.color = 'blue';
+            var b = document.getElementById('hname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('form').addEventListener('dblclick', name6);
+        function name6() {
+            document.getElementById('uname').style.color = 'orange';
+            var b = document.getElementById('uname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('form').addEventListener('mouseup', name7);
+        function name7() {
+            document.getElementById('cname').style.color = 'red';
+            var b = document.getElementById('cname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('form').addEventListener('mousedown', name8);
+        function name8() {
+            document.getElementById('dname').style.color = 'blue';
+            var b = document.getElementById('dname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('form').addEventListener('mouseover', name9);
+        function name9() {
+            document.getElementById('zname').style.color = 'orange';
+            var b = document.getElementById('zname');
+            b.value = b.value.toUpperCase();
+        }
+
+        document.getElementById('form').addEventListener('dblclick', name10);
+        function name10() {
+            document.getElementById('cname').style.color = 'red';
+            document.getElementById('cname').style.borderColor = 'red';
+            var b = document.getElementById('cname');
+            b.value = b.value.toUpperCase();
+        }
+
+    </script>
+</body>
+</html>
+
