@@ -1,0 +1,313 @@
+
+<!-- **************************************Hide and Show******************************* -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+// Hide displayed paragraph
+$(".btn-hide").click(function(){
+$("p").hide();
+});
+// Show hidden paragraph
+$(".btn-show").click(function(){
+$("p").show();
+});
+});
+</script>
+</head>
+<body>
+<button type="button" class="btn-hide">Hide</button> 
+<button type="button" class="btn-show">Show</button>
+<p>This is a paragraph.</p>
+</body>
+</html> -->
+
+<!-- ***********************************Toggle*********************************************** -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+// Toggle paragraph display
+$(".btn-toggle").click(function(){
+$("p").toggle();
+});
+});
+</script>
+</head>
+<body>
+<button type="button" class="btn-toggle">Toggle</button> 
+<p>This is a paragraph.</p>
+</body> </html>  -->
+
+<!-- **************************************FadeIn-FadeOut******************************* -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        // Hide displayed paragraph
+        $(".btn-FadeIn").click(function()
+        {
+            $("p").fadeIn();
+        });
+        // Show hidden paragraph
+        $(".btn-FadeOut").click(function()
+        {
+            $("p").fadeOut();
+        });
+    });
+</script>
+</head>
+<body>
+<button type="button" class="btn-FadeIn">FadeIn</button> 
+<button type="button" class="btn-FadeOut">FadeOut</button>
+<p>This is a paragraph.</p>
+</body>
+</html> -->
+
+<!-- **************************************Fade-Toggle******************************* -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        // Hide displayed paragraph
+        $(document).click(function()
+        {
+            $("p").fadeToggle();
+        });
+    });
+</script>
+</head>
+<body>
+<button type="button" class="toggle">Toggle</button>
+<p>This is a paragraph.</p>
+</body>
+</html> -->
+
+<!-- **************************************Fade-To******************************* -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $("button").click(function()
+        {
+            $("p").fadeTo("slow",0.4);
+        });
+    });
+</script>
+</head>
+<body>
+<button type="button" class="toggle">Fade-To</button>
+<p>This is a paragraph.</p>
+</body>
+</html> -->
+
+<!-- **************************************slide up/Down******************************* -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $(".up").click(function()
+        {
+            $("p").slideUp("slow");
+        });
+        $(".down").click(function()
+        {
+            $("p").slideDown("slow");
+        });
+    });
+</script>
+</head>
+<body>
+<button type="button" class="up">Slide-up</button>
+<button type="button" class="down">Slide-down</button>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+</body>
+</html> -->
+<!-- ******************************Slide-Toggle********************************** -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $(".toggle").click(function()
+        {
+            $("p").slideToggle("slow");
+        });
+    });
+</script>
+</head>
+<body>
+<button type="button" class="toggle">Slide-Toggle</button>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+</body>
+</html> -->
+<!-- ***********************************Animation-Effect - 1******************************************* -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $("#btn1").click(function()
+        {
+            $("#box").animate({height: "500px"});
+        });
+        $("#btn2").click(function()
+        {
+            $("#box").animate({height: "100px"});
+        });
+    });
+</script>
+</head>
+<body>
+    <button id="btn1">Animate height</button>
+    <button id="btn2">Reset height</button>
+    <div id="box" style="background:rgb(247, 182, 4);height:100px;width:200px;margin:6px;"></div>
+</body>
+</html>  -->
+   
+<!-- ***********************************Animation-Effect - 2******************************************* -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $("#btn1").click(function()
+        {
+            $("#box").animate({height: "500px"})
+                     .animate({width:"300"})
+                     .animate({borderwidth:"10"})
+                     .animate({opacity:"0.5"});
+        });
+    });
+</script>
+</head>
+<body>
+    <button id="btn1">Start Animate</button>
+    <div id="box" style="background:rgba(186, 127, 226, 0.925);height:100px;width:200px;margin:6px;"></div>
+</body>
+</html> -->
+
+<!-- ***********************************Animation-Start-stop******************************************* -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $("#btn-start").click(function()
+        {
+            $("div").animate({height: 300}, 3000);
+            $("div").animate({width: 300}, 3000);
+        });
+        $("#btn-stop").click(function()
+        {
+            $("div").stop();
+        });
+    });
+</script>
+</head>
+<body>
+    <button id="btn-start">Start Animation</button>
+    <button id="btn-stop">Stop Current Animation</button>
+    <div style="background:rgb(0, 255, 0);height:100px;width:100px"></div>
+    </body>
+</html>  -->
+
+<!-- ***********************************Chaining Method******************************************* -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> 
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $("button").click(function()
+        {
+            $(".p1").css("color", "Red").slideUp(2000).slideDown(2000);
+        });
+    });
+</script>
+</head>
+<body>
+<p class="p1">Hello</p>
+<button>Play with me</button>
+</body>
+</html>  -->
+
+<!-- ********************************************************************************************************* -->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>show demo</title>
+  <style>
+  span {
+    display: none;
+  }
+  div {
+    display: none;
+  }
+  p {
+    font-weight: bold;
+    background-color: #fcd;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<button>Do it!</button>
+<span>type 'yes' if you are) </span>
+<div>
+  <form>
+    <input type="text"  value="type yes">
+  </form>
+</div>
+<script>
+    function doIt()
+    {
+        $( "span,div" ).show( "slow" );
+    }
+    $( "button" ).click( doIt );
+ 
+    $( "form" ).submit(function( event )
+    {
+        if ( $( "input" ).val() === "yes" ) 
+        {
+            $( this ).text( "Ok, DONE! (now showing)" );
+            
+         }
+        $( "span,div" ).hide( "slow" );
+        event.preventDefault();
+    });
+</script>
+ 
+</body>
+</html>
+
+    
