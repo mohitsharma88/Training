@@ -1,0 +1,779 @@
+
+<!-- *************************************************Find element	$('div')	Find all <div> elements******************************************************* -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('p').append('This is paragraph.'); // appends text to all p elements
+
+            $('div').append('This is div.'); // appends text to all div elements
+
+        });
+    </script>
+    <style>
+        div{
+        	border: 1px solid;
+        }
+        
+        p{
+        	border: 1px dashed;
+        }
+    </style>
+</head>
+<body>   
+	<div>
+		<p></p>
+		<p></p>
+	</div>
+
+	<p></p>
+
+	<div></div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('p' ,'div' , 'code' ).append('This is paragraph.'); // appends text to all p elements
+
+            $('div').append('This is div.'); // appends text to all div elements
+
+        });
+    </script>
+    <style>
+        div{
+        	border: 1px solid;
+        }
+        
+        p{
+        	border: 1px dashed;
+        }
+    </style>
+</head>
+<body>   
+	<div>
+		<p></p>
+		<code><p>code:</p></code>
+	</div>
+
+	<p></p>
+
+	<div></div>
+</body>
+</html> -->
+
+
+<!-- *************Find descendant elements	$('div p')	Find all <p> elements which are descendants of <div>**************** -->
+    <!-- <!DOCTYPE html>
+    <html>
+    
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('div p').append(" - Find descendant elements	$('div p')	Find all <p> elements which are descendants of <div");
+            });
+        </script>
+    </head>
+    
+    <body>
+        <h1>CSS Selector: Parent descendant</h1>
+        <div>
+            <p>Paragraph 1</p>
+            <div>
+                <p>
+                    Paragraph 2
+                </p>
+            </div>
+        </div>
+        <p>Paragraph 3</p>
+        <span>
+            <p>Paragraph 4</p>
+        </span>
+    </body>
+    
+    </html> -->
+
+<!-- ******************$('div > p')	Find <p> which is child of <div>********************** -->
+    <!-- <!DOCTYPE html>
+    <html>
+    
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('div > p').append(" <b> - find p whichnis child of div tag </b> ");
+            });
+        </script>
+    </head>
+    
+    <body>
+        <h1>CSS Selector: Parent descendant</h1>
+        <div>
+            <p>Paragraph 1</p>
+            <div>
+                <p>
+                    Paragraph 2
+                </p>
+            </div>
+        </div>
+        <p>Paragraph 3</p>
+        <span>
+            <p>Paragraph 4</p>
+        </span>
+    </body>
+    
+    </html> -->
+<!-- ******************************$(*)	Find all elements********************************** -->
+<!-- <!DOCTYPE html>
+    <html>
+    
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('*').append(" <b> - append for all </b> ");
+            });
+        </script>
+    </head>
+    
+    <body>
+        <h1>CSS Selector: Parent descendant</h1>
+        <div>
+            <p>Paragraph 1</p>
+            <div>
+                <p>
+                    Paragraph 2
+                </p>
+            </div>
+        </div>
+        <p>Paragraph 3</p>
+        <span>
+            <p>Paragraph 4</p>
+        </span>
+    </body>
+    
+    </html> -->
+    
+    <!-- ********************$('#myDiv')	Find element whose id is myDiv************************-->
+    <!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+	$(document).ready(function () {
+		$('#myDiv').append(" - This element id is myDiv");
+		$('#myPtag').append(" - This element id is myPtag");
+	});
+</script>
+</head>
+<body>   
+	<h1>CSS Selector: #id</h1>
+	<div id="myDiv">
+		Div Tag
+	</div>
+	<p id="myPtag">
+		p Tag
+	</p>	
+</body>
+</html> -->
+ <!-- ********************$('div#myDiv')	Find <div> element whose Id is myDiv************************-->
+ <!-- <!DOCTYPE html>
+ <html>
+ <head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+ <script>
+     $(document).ready(function () {
+         $('#myDiv').append(" - This element id is myDiv1");
+         $('#myPtag').append(" - This element id is myDiv2");
+     });
+ </script>
+ </head>
+ <body>   
+     <h1>CSS Selector: #id</h1>
+     <div id="myDiv">
+         Div Tag
+     </div>
+     <p id="myPtag">
+         p Tag
+     </p>	
+ </body>
+ </html> -->
+ <!-- ********************$('#myDiv1, #myDiv2')	Find multiple elements by id separated by comma************************-->
+ <!-- <html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#myDiv1,#myDiv2').append(" - Multiple elements by ids selected");
+    
+            });
+        </script>
+    </head>
+    <body>
+        <h1>CSS Selector: #id, #id </h1>
+        <div id="myDiv1">
+            Div Tag
+        </div>
+        <div id="myDiv2">
+            Div Tag
+        </div>
+    
+        <div>
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+            <p>Paragraph 3</p>
+            <p>Paragraph 4</p>
+        </div>
+    </body>
+    </html> -->
+
+     <!-- ********************Find by CSS class	$('.myCSSClass')	Find all the elements with class=myCSSClass.************************-->
+     <!-- <!DOCTYPE html>
+     <html>
+     <head>
+         <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+         <script>
+             $(document).ready(function () {
+                 $('.myCSSClass').append(" - This element has myCSSClass");
+     
+             });
+         </script>
+     </head>
+     <body>
+         <h1>CSS Selector: .CSSClassName</h1>
+         <div id="myDiv1" class="myCSSClass">
+             Div Tag
+         </div>
+         <p class="myCSSClass">Paragraph 1</p>
+         <span class="myCSSClass">Span Tag</span>
+         <p>Paragraph 2</p>
+         <p class="myCSSClass2">Paragraph 3</p>   
+     </body>
+     </html> -->
+
+<!-- ********************$('.myCSSClass1, .myCSSClass2 ')	Finds all elements whose class attribute is set to myCSSClass1 or myCSSClass2 ************************-->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.myCSSClass , .myCSSClass2').append(" - This element has myCSSClass");
+
+        });
+    </script>
+</head>
+<body>
+    <h1>CSS Selector: .CSSClassName</h1>
+    <div id="myDiv1" class="myCSSClass">
+        Div Tag
+    </div>
+    <p class="myCSSClass">Paragraph 1</p>
+    <span class="myCSSClass">Span Tag</span>
+    <p>Paragraph 2</p>
+    <p class="myCSSClass2">Paragraph 3</p>   
+</body>
+</html>      -->
+
+<!-- ********************$('div.myCSSClass')	Finds all <div> elements with class=myCSSClass************************-->
+    <!-- <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $('div.myCSSClass').append(" - This div has myCSSClass");
+        
+                });
+            </script>
+        </head>
+        <body>
+            <h1>CSS Selector: element.CSSClass </h1>
+            <div class="myCSSClass">
+                    Inside Div Tag 1
+            </div>
+            <div>Inside Div Tag 2</div>
+            <p class="myCSSClass">Paragraph 1</p>
+        
+        </body>
+        </html> -->
+
+<!-- ********************Find child element	$('p:first-child')	Find all <p> elements, which is the first child of its parent element. (parent element can be anything)************************-->
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+            $('p:first-child').append(" - This element is a first child element");
+
+        });
+         </script>
+    </head>
+    <body>
+        <h1>CSS Selector: element:first-child </h1>
+        <div>
+            <p>Inside div - Paragraph 1</p>
+            <p>Inside div - Paragraph 2</p>
+            <p>Inside div - Paragraph 3</p>
+            <p>Inside div - Paragraph 4</p>
+        </div>
+        <span>
+            <p>Inside span tag - Paragraph 1</p>
+            <p>Inside span tag - Paragraph 2</p>
+            <p>Inside span tag - Paragraph 3</p>
+        </span>
+    </body>
+</html>    -->
+
+<!-- ********************$("p:last-child")	Selects all <p> elements which is the last child of its parent element. (parent element can be anything)************************-->
+    <!-- <!DOCTYPE html>
+    <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                $('p:last-child').append(" - This element is a last child element");
+    
+            });
+             </script>
+        </head>
+        <body>
+            <h1>CSS Selector: element:first-child </h1>
+            <div>
+                <p>Inside div - Paragraph 1</p>
+                <p>Inside div - Paragraph 2</p>
+                <p>Inside div - Paragraph 3</p>
+                <p>Inside div - Paragraph 4</p>
+            </div>
+            <span>
+                <p>Inside span tag - Paragraph 1</p>
+                <p>Inside span tag - Paragraph 2</p>
+                <p>Inside span tag - Paragraph 3</p>
+            </span>
+        </body>
+    </html>    -->
+
+<!-- ********************$("p:nth-child(5)")	Selects all <p> elements which is the 5th child of its parent element. (parent element can be anything)************************-->
+    <!-- <!DOCTYPE html>
+    <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                $('p:nth-child(3)').append(" - This element is 3rd child element");
+    
+            });
+             </script>
+        </head>
+        <body>
+            <h1>CSS Selector: element:first-child </h1>
+            <div>
+                <p>Inside div - Paragraph 1</p>
+                <p>Inside div - Paragraph 2</p>
+                <p>Inside div - Paragraph 3</p>
+                <p>Inside div - Paragraph 4</p>
+            </div>
+            <span>
+                <p>Inside span tag - Paragraph 1</p>
+                <p>Inside span tag - Paragraph 2</p>
+                <p>Inside span tag - Paragraph 3</p>
+            </span>
+        </body>
+    </html>      -->
+
+  <!-- ********************$("p:nth-last-child(2)")	Selects all <p> elements which is the 2nd last child of its parent element. (parent element can be anything)************************-->
+    <!-- <!DOCTYPE html>
+    <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                $('p:nth-last-child(3)').append(" - This element is 3rd last child element");
+    
+            });
+             </script>
+        </head>
+        <body>
+            <h1>CSS Selector: element:first-child </h1>
+            <div>
+                <p>Inside div - Paragraph 1</p>
+                <p>Inside div - Paragraph 2</p>
+                <p>Inside div - Paragraph 3</p>
+                <p>Inside div - Paragraph 4</p>
+            </div>
+            <span>
+                <p>Inside span tag - Paragraph 1</p>
+                <p>Inside span tag - Paragraph 2</p>
+                <p>Inside span tag - Paragraph 3</p>
+            </span>
+        </body>
+    </html>    -->
+  <!-- ********************$("p:only-child")	Selects all <p> elements which is the only child of its parent element. (parent element can be anything)************************-->
+    <!-- <!DOCTYPE html>
+    <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                $('p:only-child').append(" - This element is the only child element of the parent element");
+    
+            });
+             </script>
+        </head>
+        <body>
+            <h1>CSS Selector: element:only-child </h1>
+            <div>
+                <p>Inside div - Paragraph 1</p>
+            </div>   
+            <div>
+                <p>Inside div - Paragraph 1</p>
+            </div>    
+            <span>
+                <p>Inside span tag - Paragraph 1</p>
+                <p>Inside span tag - Paragraph 2</p>
+            </span>
+        </body>
+    </html>      -->
+
+     <!-- ********************Find by attribute	$('[class]')	Find all the elements with the class attribute(whatever the value).************************-->
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+            $('[class]').append(" - This div element has at least one css class");
+
+            });
+        </script>
+    </head>
+    <body>
+        <h1>CSS Selector: element[attribute] </h1>
+        <div class="myCSSClass">
+            Inside Div Tag 1
+        </div>
+        <br/>
+        <div>
+            Inside Div Tag 2
+        </div>
+        <br/>
+        <div class="myCSSClass1">
+            Inside Div Tag 3
+        </div>    
+        <span>
+            <p>Inside span tag - Paragraph 1</p>
+            <p>Inside span tag - Paragraph 2</p>
+        </span>
+    </body>
+</html> -->
+
+<!-- ********************$('div[class]')	Find all the <div> elements that have a class attribute(whatever the value).************************-->
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+            $('div[class]').append(" - This div element has at least one css class");
+
+            });
+        </script>
+    </head>
+    <body>
+        <h1>CSS Selector: element[attribute] </h1>
+        <div class="myCSSClass">
+            Inside Div Tag 1
+        </div>
+        <br/>
+        <div>
+            Inside Div Tag 2
+        </div>
+        <br/>
+        <div class="myCSSClass1">
+            Inside Div Tag 3
+        </div>    
+        <span>
+            <p>Inside span tag - Paragraph 1</p>
+            <p>Inside span tag - Paragraph 2</p>
+        </span>
+    </body>
+</html> -->
+<!-- ********************Find by containing value of attribute	$('div[class=myCls]')	Find all the <div> elements whose class attributes are equal to myCls.************************-->
+<!-- <html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+            $("div[class = 'myCls']").append(" - This div element has myCls CSS class");
+
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>CSS Selector: element[attribute |= 'value'] </h1>
+        <div class="myCls">
+            Inside First Div
+        </div>
+        <div class="myCls-test">
+            Inside Second Div
+        </div>
+  	    <div class="myCls">
+            Inside Second Div
+        </div>
+        <div class="myClsone">
+            Inside Third Div
+        </div>
+        <span class="myClss">
+            <p>Paragraph 1</p>
+        </span>
+    </body>
+</html> -->
+
+<!-- ********************Find by containing value of attribute	$('div[class|=myCls]')	Find all the <div> elements whose class attributes are equal to myCls.************************-->
+    <!-- <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                $("div[class |= 'myCls']").append(" - This div element has myCls CSS class");
+    
+                });
+            </script>
+        </head>
+    
+        <body>
+            <h1>CSS Selector: element[attribute |= 'value'] </h1>
+            <div class="myCls">
+                Inside First Div
+            </div>
+            <div class="myCls-test">
+                Inside Second Div
+            </div>
+              <div class="myCls">
+                Inside Second Div
+            </div>
+            <div class="myClsone">
+                Inside Third Div
+            </div>
+            <span class="myClss">
+                <p>Paragraph 1</p>
+            </span>
+        </body>
+    </html> -->
+
+ <!-- ********************$('div[class *="myCls"]')	Selects <div> elements whose class attributes contain myCls************************-->
+    <!-- <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                $("div[class *= 'myCls']").append(" - This div element has myCls CSS class");
+    
+                });
+            </script>
+        </head>
+    
+        <body>
+            
+            <div class="myCls">
+                Inside First Div
+            </div>
+            <div class="myCls-test">
+                Inside Second Div
+            </div>
+              <div class="nkj-myCls">
+                Inside Second Div
+            </div>
+            <div class="myClsone">
+                Inside Third Div
+            </div>
+            <span class="myClss">
+                <p>Paragraph 1</p>
+            </span>
+            <h4>hello</h4>
+        </body>
+    </html>    -->
+
+    <!-- ********************$('div[class~=myCls]')	Selects div elements whose class attributes contain myCls, delimited by spaces.************************-->
+    <!-- <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                $("div[class ~= 'myCls']").append(" - This div element has myCls CSS class");
+    
+                });
+            </script>
+        </head>
+    
+        <body>
+            <div class="myCls">
+                Inside First Div
+            </div>
+            <div class="myCls-test">
+                Inside Second Div
+            </div>
+              <div class="myCls-t">
+                Inside Second Div
+            </div>
+            <div class="myCls one">
+                Inside Third Div
+            </div>
+            <span class="myClss">
+                <p>Paragraph 1</p>
+            </span>
+
+            <div class="myCls test">
+                Inside First Div
+            </div>
+            <div class="my_Cls test">
+                Inside Second Div
+            </div>
+            <div class="test1 test2">
+                Inside Third Div
+            </div>
+            <div class="myclass myCls test">
+                Inside Fourth Div
+            </div>
+            <h4>hello</h4>
+        </body>
+    </html>    -->
+
+  <!-- ********************$("div[class $= 'myCls']")	Selects <div> elements whose class attribute value ends with myCls. The comparison is case sensitive.************************-->
+    <!-- <html>
+         <head>
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                 $(document).ready(function () {
+                 $("div[class $= 'myCls']").append(" - This element is selected");
+
+                });
+             </script>
+</head>
+
+<body>
+    <h1>CSS Selector: element[attribute $= 'value'] </h1>
+    <div class="testingmyCls">
+        Inside First Div
+    </div>
+    <div class="my_Cls testmyCls">
+        Inside Second Div
+    </div>
+    <div class="myCls Class">
+        Inside Third Div
+    </div>
+    <span class="myCls">
+        <p>Paragraph 1</p>
+    </span>
+</body>
+</html> -->
+
+ <!-- ********************$("div[class $= 'myCls']")	Selects <div> elements whose class attribute value ends with myCls. The comparison is case sensitive.************************-->
+    <!-- <!DOCTYPE html>
+    <html>
+    
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("div[class != 'myCls']").append(" - This element does not have myCls CSS class");
+    
+            });
+        </script>
+    </head>
+    
+    <body>
+      <h1>CSS Selector: element[attribute != 'value']</h1>
+        <div class="myCls">
+            Inside First Div
+        </div>
+        <div class="my_Cls test">
+            Inside Second Div
+        </div>
+        <div class="myClsClass">
+            Inside Third Div
+        </div>
+        <span class="myCls">
+            <p>Paragraph 1</p>
+        </span>
+    
+    </body>
+    
+    </html> -->
+
+   <!-- ********************$("div[class $= 'myCls']")	Selects <div> elements whose class attribute value ends with myCls. The comparison is case sensitive.************************-->
+    <!-- <!DOCTYPE html>
+    <html>
+    
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("div[class != 'myCls']").append(" - This element does not have myCls CSS class");
+    
+            });
+        </script>
+    </head>
+    
+    <body>
+      <h1>CSS Selector: element[attribute != 'value']</h1>
+        <div class="myCls">
+            Inside First Div
+        </div>
+        <div class="my_Cls test">
+            Inside Second Div
+        </div>
+        <div class="myClsClass">
+            Inside Third Div
+        </div>
+        <span class="myCls">
+            <p>Paragraph 1</p>
+        </span>
+    
+    </body>
+    
+    </html> -->
+     <!-- ********************$("div[class != 'myCls']")	Selects <div> elements which do not have class attribute or value does not equal to myCls.************************-->
+    
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    $("div:contains('tutorialsteacher')").append(" - This element contains tutorialsteacher");
+        
+                });
+            </script>
+        </head>
+        
+        <body>
+          <h1>CSS Selector: element:contains('value')</h1>
+            <div class="myClstest">
+                tutorialsteacher
+            </div>
+            <div class="test1">
+                Hello World!
+            </div>
+            <div class="myCls_Class">
+                Welcome to tutorialsteacher site
+            </div>
+            <span class="myCls">
+                <p>Paragraph 1</p>
+            </span>
+        </body>
+        
+        </html>
+
