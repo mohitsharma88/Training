@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+</head>
+<body>
+<main>
+  <div class="content" align="center">
+            <div class="home__hero">
+            <div class="home__cta">
+            </div>
+        </div> 
+        <div class="home__slider">
+            <div class="bxslider">
+        <div><img src="img1.jpg"></div>
+        <div><img src="img2.jpg"></div>
+        <div><img src="img3.jpg"></div>
+        </div>
+        </div>
+        <script>
+                $(function()
+                {
+                    $('.bxslider').bxSlider({
+                        mode: 'fade',
+                        captions: true,
+                        slideWidth: 800
+                    });
+                });
+        </script>
+  </div>
+</main>      
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36499930-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</body>
+</html>

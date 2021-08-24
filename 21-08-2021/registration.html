@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <!-- sitepoint.com -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+        
+        <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+        <script>$(document).ready(function() {
+            $('#example').DataTable();
+        } );</script>
+        <style>
+            @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+            body {
+            font-family: "Open Sans";
+            font-size: 14px;
+            }
+            .container {
+            width: 500px;
+            margin: 25px auto;
+            }
+
+            form {
+            padding: 20px;
+            background:  #558dd6;
+            color: #fff;
+            border-radius: 4px;
+            }
+            form label,
+            form input,
+            form button {
+            border: 0;
+            margin-bottom: 3px;
+            display: block;
+            width: 100%;
+            }
+            form input {
+            height: 25px;
+            line-height: 25px;
+            background: #fff;
+            color: #000;
+            padding: 0 6px;
+            box-sizing: border-box;
+            }
+
+            form button {
+            height: 30px;
+            line-height: 30px;
+            
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            cursor: pointer;
+            }
+            form .error {
+            color: #ff0000;
+            }
+
+            .article-reference {
+            margin-top: 15px;
+            }
+            .article-reference a {
+            color: #e67e22;
+            }
+            table, td, th {
+              border: 1px solid black;
+                }
+            table {
+                border-collapse: collapse;
+                width: 50%;
+            }
+            th, td {
+            padding: 5px;
+                text-align: center;
+                }
+            body {
+             background: linear-gradient(135deg, orange 60%, cyan);
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            $(function()
+            {
+                $("form[name='registration']").validate(
+                {
+                    rules: {
+                                        firstname: "required",
+                                        lastname: "required",
+                                email: {
+                                        required: true,
+                                        email: true
+                                    },
+                                password: {
+                                        required: true,
+                                        minlength: 5
+                                        },
+                                Mobile:{
+                                    required:true,
+                                    minlength:10,
+                                    maxlength:10
+                                        },
+                                DOB:{
+                                    required:true
+                                    },
+                                age:{
+                                    required:true
+                                    },
+                                file:{
+                                    required:true
+                                    },
+                                pass1:{
+                                    required:true
+                                    },
+                                pass2:{
+                                    required:true
+                                    }                                
+                            },
+
+                    //error-message            
+                    messages: {
+                    firstname: "Please enter your firstname",
+                    lastname: "Please enter your lastname",
+                    password: {
+                        required: "Please provide a password",
+                        minlength: "Your password must be at least 5 characters long"
+                    },
+                    email: "Please enter a valid email address",
+                    Mobile:"Please enter valiad mobile number",
+                    age:"please Enter Your Age"
+                    },
+                    
+                    submitHandler: function(form)
+                    {
+                        form.submit();
+                    }
+                });
+            });
+
+            function matchPassword() {
+            var pw1 = document.getElementById("pass1");
+            var pw2 = document.getElementById("pass2");
+            if(pw1 != pw2)
+            {	
+                alert("Passwords did not match");
+            } else {
+                alert("Password created successfully");
+            }
+            }
+        </script>
+            <div class="container">
+                <h2 class="title">Registration</h2>
+                <form action="#" name="registration">
+        
+                    <label for="firstname">First Name</label>
+                    <input type="text" name="firstname" id="firstname" placeholder="John">
+                
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="lastname" id="lastname" placeholder="Doe">
+                
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="john@doe.com">
+
+                    <label for="Mobile">Mobile</label>
+                    <input type="Number" name="mobile" id="mobile" placeholder="1234567890" maxlength=10 minlength=10> 
+
+                    <label for="DOB">Date Of Birth</label>
+                    <input type="date" name="DOB" id="DOB" placeholder="" > 
+
+                    <label for="Age">Age</label>
+                    <input type="number" name="age" id="age" placeholder="25">
+
+                    <label for="file">Passport</label>
+                    <input type="file" name="file" id="file" placeholder="less than 1 MB">
+
+                    <label for="password">Password</label>
+                    <input type="password" name="pass1" id="pass1" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;">
+                    
+                    <label for="password">Confirm Password</label>
+                    <input type="password" name="pass2" id="pass2" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;">
+                    
+                    <button type="submit" onclick="matchPassword()">Register</button>
+                </form>  
+            </div> 
+            <div>
+                    <h1>Table</h1>
+                    <table id="example" class="display" style="width:120%" width="100%"> 
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                            </tr>
+                        </thead>
+                        <tbody>    
+                            <tr>
+                                <td>rohan</td>
+                                <td>Software developer</td>
+                                <td>gujrat</td>
+                                <td>23</td>
+                                <td>2008/19/6</td>
+                                <td>19,500</td>
+                            </tr>
+                            <tr>
+                                <td>rohan</td>
+                                <td>Tester</td>
+                                <td>rajashthan</td>
+                                <td>31</td>
+                                <td>2001/10/26</td>
+                                <td>122,500</td>
+                            </tr>
+                            <tr>
+                                <td>aman</td>
+                                <td>support</td>
+                                <td>mumbai</td>
+                                <td>21</td>
+                                <td>2019/10/26</td>
+                                <td>42,500</td>
+                            </tr>
+                            <tr>
+                                <td>venu</td>
+                                <td>Team Leader</td>
+                                <td>maharashtra</td>
+                                <td>20</td>
+                                <td>2021/10/26</td>
+                                <td>18,500</td>
+                            </tr>
+                            <tr>
+                                <td>rahul</td>
+                                <td>Team Leader</td>
+                                <td>maharashtra</td>
+                                <td>31</td>
+                                <td>2011/10/26</td>
+                                <td>80,500</td>
+                            </tr>
+                            <tr>
+                                <td>rahul</td>
+                                <td>Team Leader</td>
+                                <td>maharashtra</td>
+                                <td>31</td>
+                                <td>2011/10/26</td>
+                                <td>80,500</td>
+                            </tr>
+                            <tr>
+                                <td>rahul</td>
+                                <td>Team Leader</td>
+                                <td>maharashtra</td>
+                                <td>31</td>
+                                <td>2011/10/26</td>
+                                <td>80,500</td>
+                            </tr>
+                            <tr>
+                                <td>rahul</td>
+                                <td>Team Leader</td>
+                                <td>maharashtra</td>
+                                <td>31</td>
+                                <td>2011/10/26</td>
+                                <td>80,500</td>
+                            </tr>
+                            <tr>
+                                <td>rahul</td>
+                                <td>Team Leader</td>
+                                <td>maharashtra</td>
+                                <td>31</td>
+                                <td>2011/10/26</td>
+                                <td>80,500</td>
+                            </tr>
+                            <tr>
+                                <td>rahul</td>
+                                <td>Team Leader</td>
+                                <td>maharashtra</td>
+                                <td>31</td>
+                                <td>2011/10/26</td>
+                                <td>80,500</td>
+                            </tr>
+                            <tr>
+                                <td>rahul</td>
+                                <td>Team Leader</td>
+                                <td>maharashtra</td>
+                                <td>31</td>
+                                <td>2011/10/26</td>
+                                <td>80,500</td>
+                            </tr>
+                            <tr>
+                                <td>shrikant</td>
+                                <td>Team Leader</td>
+                                <td>maharashtra</td>
+                                <td>31</td>
+                                <td>2011/10/26</td>
+                                <td>80,500</td>
+                            </tr> 
+                            <tr>
+                                <td>ketul</td>
+                                <td>Team Leader</td>
+                                <td>maharashtra</td>
+                                <td>31</td>
+                                <td>2011/10/26</td>
+                                <td>80,500</td>
+                            </tr>
+                            <tr>
+                                <td>raj</td>
+                                <td>Team Leader</td>
+                                <td>maharashtra</td>
+                                <td>31</td>
+                                <td>2011/10/26</td>
+                                <td>80,500</td>
+                            </tr>
+                            <tr>
+                                <td>rahul</td>
+                                <td>Team Leader</td>
+                                <td>maharashtra</td>
+                                <td>31</td>
+                                <td>2011/10/26</td>
+                                <td>80,500</td>
+                            </tr>
+                
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </body>
+            </div>
+    </body>
+</html>
