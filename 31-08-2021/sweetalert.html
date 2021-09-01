@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js" integrity="sha512-MqEDqB7me8klOYxXXQlB4LaNf9V9S0+sG1i8LtPOYmHqICuEZ9ZLbyV3qIfADg2UJcLyCm4fawNiFvnYbcBJ1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css" integrity="sha512-hwwdtOTYkQwW2sedIsbuP1h0mWeJe/hFOfsvNKpRB3CkRxq8EW7QMheec1Sgd8prYxGm1OM9OZcGW7/GUud5Fw==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+<body>
+    <center>
+        <p>
+            <input type="text" id="username" placeholder="Username">
+        </p>
+        <p>
+            <input type="password" id="pass" placeholder="Password">
+        </p>
+        <p>
+            <input type="submit" onclick="validations();">
+        </p>
+
+        <script type="text/javascript">
+            function validations()
+            {
+                var username="mohit";
+                var password="123";
+
+                var uname=document.getElementById('username').value;
+                var pass=document.getElementById('pass').value;
+                if((username == uname) && (pass == password))
+                {
+                    swal("Good job !", "Yours Deatils HAs been Matched","success");
+                }
+                else
+                {
+                    swal("Oops...","Something went wrong !","error");
+                }
+                
+            }
+        </script>
+    </center>
+
+</body>
+</html>
