@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+$(document).ready(function () {
+$.ajax({
+url: "Task2Data.json",
+success: function (result, status, xhr) {
+var table = $("<table><tr><th>userid</th><th>id</th><th>title</th><th>body</th></tr>");
+var tr;
+for (var i = 0; i < result.length; i++) {
+tr = $("<tr>");
+tr.append("<td>" + result[i].userid + "</td>");
+tr.append("<td>" + result[i].id + "</td>");
+tr.append("<td>" + result[i].title + "</td>");
+tr.append("<td>" + result[i].body + "</td>");
+tr.append("</tr>");
+table.append(tr);
+}
+table.append("</table>");
+$("#myData").html(table);
+}
+});
+});
+</script>
+</head>
+<body>
+<div id="myData"></div>
+</body>
+</html>

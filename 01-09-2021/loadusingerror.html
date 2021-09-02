@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#LoadData").click(function(e)
+            {
+                $.ajax({
+                    url:"no-file.txt",
+                    success:function(result,status,xhr)
+                    {
+                        $("#myData").html(result)
+                    },
+                    error:function(xhr,status,error)
+                    {
+                        $("#myData").html("Result: "+ status + " " + xhr.status + " " + xhr.statusText)
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="LoadData">Load</button>
+    <div id="myData"></div>
+</body>
+</html>
