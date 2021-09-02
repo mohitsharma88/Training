@@ -1,0 +1,660 @@
+<!-- ***************************Clone****************************** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>clone demo</title>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<b>Hello</b><p>, how are you?</p>
+ 
+<script>
+$( "b" ).clone().prependTo( "p" );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- *******************Wrap***************************** -->
+<!-- <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>wrap demo</title>
+  <style>
+  div {
+    border: 2px solid blue;
+  }
+  p {
+    background: yellow;
+    margin: 4px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<p>Hello</p>
+<p>cruel</p>
+<p>World</p>
+ 
+<script>
+$( "p" ).wrap( "<div></div>" );
+</script>
+ 
+</body>
+</html -->
+
+<!-- ********wrap all*********** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>wrapAll demo</title>
+  <style>
+  div {
+    border: 2px solid blue;
+  }
+  p {
+    background: yellow;
+    margin: 4px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<p>Hello</p>
+<p>cruel</p>
+<p>World</p>
+ 
+<script>
+$( "p" ).wrapAll( "<div></div>" );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- ********wrap Inner*********** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>wrapAll demo</title>
+  <style>
+  div {
+    border: 2px solid blue;
+  }
+  p {
+    background: yellow;
+    margin: 4px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<p>Hello</p>
+<p>cruel</p>
+<p>World</p>
+ 
+<script>
+$( "p" ).wrapInner( "<b></b>" );
+</script>
+</script>
+ 
+</body>
+</html> -->
+
+<!-- ***************************Append************************************ -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>append demo</title>
+  <style>
+  p {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<p>I would like to say: </p>
+ 
+<script>
+$( "p" ).append( "<strong>Hello</strong>" );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- ***************************Append************************************ -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>append demo</title>
+  <style>
+  p {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<p>I would like to say: </p>
+ 
+<script>
+$( "p" ).append( "<strong>Hello</strong>" );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- ***************************Append To************************************ -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>appendTo demo</title>
+  <style>
+  #foo {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<span>I have nothing more to say... </span>
+ 
+<div id="foo">FOO! </div>
+ 
+<script>
+$( "span" ).appendTo( "#foo" );
+</script>
+ 
+</body>
+</html> -->
+<!-- ******************************.html***************************************************** -->
+<!-- <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>html demo</title>
+  <style>
+  p {
+    margin: 8px;
+    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+  }
+  b {
+    text-decoration: underline;
+  }
+  button {
+    cursor: pointer;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<p>
+  <b>Click</b> to change the <span id="tag">html</span>
+</p>
+<p>
+  to a <span id="text">text</span> node.
+</p>
+<p>
+  This <button name="nada">button</button> does nothing.
+</p>
+ 
+<script>
+$( "p" ).click(function() {
+  var htmlString = $( this ).html();
+  $( this ).text( htmlString );
+});
+</script>
+ 
+</body>
+</html> -->
+<!-- **************************Prepend************************** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>prepend demo</title>
+  <style>
+  p {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<p>there, friend!</p>
+<p>amigo!</p>
+ 
+<script>
+$( "p" ).prepend( "<b>Hello </b>" );
+</script>
+ 
+</body>
+</html> -->
+<!-- **************************PrependTo************************** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>prependTo demo</title>
+  <style>
+  div {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<div id="foo">FOO!</div>
+<span>I have something to say... </span>
+ 
+<script>
+$( "span" ).prependTo( "#foo" );
+</script>
+ 
+</body>
+</html> -->
+<!-- **********************.HTML************************ -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>html demo</title>
+  <style>
+  p {
+    margin: 8px;
+    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+  }
+  b {
+    text-decoration: underline;
+  }
+  button {
+    cursor: pointer;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<p>
+  <b>Click</b> to change the <span id="tag">html</span>
+</p>
+<p>
+  to a <span id="text">text</span> node.
+</p>
+<p>
+  This <button name="nada">button</button> does nothing.
+</p>
+ 
+<script>
+$( "p" ).click(function() {
+  var htmlString = $( this ).html();
+  $( this ).text( htmlString );
+});
+</script>
+ 
+</body>
+</html> -->
+
+<!-- *****************.text****************** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>text demo</title>
+  <style>
+  p {
+    color: blue;
+    margin: 8px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<p>Test Paragraph.</p>
+ 
+<script>
+$( "p" ).text( "<b>Some</b> new text." );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- ************************ After***************************** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>after demo</title>
+  <style>
+  p {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<b>Hello</b>
+<p>I would like to say: </p>
+ 
+<script>
+$( "p" ).after( $( "b" ) );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- ************************ before***************************** -->
+ <!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>after demo</title>
+  <style>
+  p {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<b>Hello</b>
+<p>I would like to say: </p>
+ 
+<script>
+$( "p" ).before( $( "b" ) );
+</script>
+ 
+</body>
+</html>  -->
+
+<!-- ************************insertAfter***************************** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>after demo</title>
+  <style>
+  p {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<b>Hello</b>
+<p>I would like to say: </p>
+ 
+<script>
+$( "p" ).insertAfter( $( "b" ) );
+</script>
+ 
+</body>
+</html> -->
+
+
+<!-- ************************insertBefore***************************** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>after demo</title>
+  <style>
+  p {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<b>Hello</b>
+<p>I would like to say: </p>
+ 
+<script>
+$( "p" ).insertBefore( $( "b" ) );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- ************************detach*****************************
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>detach demo</title>
+  <style>
+  p {
+    background: yellow;
+    margin: 6px 0;
+  }
+  p.off {
+    background: black;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<p>Hello</p>
+how are
+<p>you?</p>
+<button>Attach/detach paragraphs</button>
+ 
+<script>
+$( "p" ).click(function() {
+  $( this ).toggleClass( "off" );
+});
+var p;
+$( "button" ).click(function() {
+  if ( p ) {
+    p.appendTo( "body" );
+    p = null;
+  } else {
+    p = $( "p" ).detach();
+  }
+});
+</script>
+ 
+</body>
+</html> -->
+
+<!-- **********************Empty************************ -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>empty demo</title>
+  <style>
+  p {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<p>
+  Hello, <span>Person</span> <em>and person</em>.
+</p>
+ 
+<button>Call empty() on above paragraph</button>
+ 
+<script>
+$( "button" ).click(function() {
+  $( "p" ).empty();
+});
+</script>
+ 
+</body>
+</html> -->
+
+<!-- *******************Remove********************** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>remove demo</title>
+  <style>
+  p {
+    background: yellow;
+    margin: 6px 0;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<p class="hello">Hello</p>
+how are
+<p>you?</p>
+<button>Call remove( ":contains('Hello')" ) on paragraphs</button>
+ 
+<script>
+$( "button" ).click(function() {
+  $( "p" ).remove( ":contains('Hello')" );
+});
+</script>
+ 
+</body>
+</html> -->
+
+<!-- *******************************wrap-unwrap*********************************** -->
+
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>unwrap demo</title>
+  <style>
+  div {
+    border: 2px solid blue;
+  }
+  p {
+    background: yellow;
+    margin: 4px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+  <button>wrap/unwrap</button>
+<p>Hello</p>
+<p>cruel</p>
+<p>World</p>
+<script>
+var pTags = $( "p" );
+$( "button" ).click(function() {
+  if ( pTags.parent().is( "div" ) ) {
+    pTags.unwrap();
+  } else {
+    pTags.wrap( "<div></div>" );
+  }
+});
+</script>
+ 
+</body>
+</html> -->
+
+<!-- ****************************Replace-all************************************ -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>replaceAll demo</title>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<p>Hello</p>
+<p>cruel</p>
+<p>World</p>
+ 
+<script>
+$( "<b>Paragraph. </b>" ).replaceAll( "p" );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- ****************************Replace-all************************************ -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>replaceAll demo</title>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<p>Hello</p>
+<p>cruel</p>
+<p>World</p>
+ 
+<script>
+$( "<b>Paragraph. </b>" ).replaceAll( "p" );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- ReplaceWith -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>replaceWith demo</title>
+  <style>
+  button {
+    display: block;
+    margin: 3px;
+    color: red;
+    width: 200px;
+  }
+  div {
+    color: red;
+    border: 2px solid blue;
+    width: 200px;
+    margin: 3px;
+    text-align: center;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<button>First</button>
+<button>Second</button>
+<button>Third</button>
+ 
+<script>
+$( "button" ).click(function() {
+  $( this ).replaceWith( "<div>" + $( this ).text() + "</div>" );
+});
+</script>
+ 
+</body>
+</html>

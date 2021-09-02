@@ -1,0 +1,439 @@
+<!-- *************************.eq*********************** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>eq demo</title>
+  <style>
+  div {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    float: left;
+    border: 2px solid blue;
+  }
+  .blue {
+    background: blue;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+ 
+<script>
+$( "body" ).find( "div" ).eq( 2 ).addClass( "blue" );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- *************************.eq*********************** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>eq demo</title>
+  <style>
+  div {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    float: left;
+    border: 2px solid blue;
+  }
+  .blue {
+    background: blue;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+ 
+<script>
+$( "body" ).find( "div" ).eq( 2 ).addClass( "blue" );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- ***********Filter*********** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>filter demo</title>
+  <style>
+  div {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    float: left;
+    border: 3px white solid;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<div id="first"></div>
+<div id="second"></div>
+<div id="third"></div>
+<div id="fourth"></div>
+<div id="fifth"></div>
+<div id="sixth"></div>
+ 
+<script>
+$( "div" )
+  .css( "background", "#b4b0da" )
+  .filter(function( index ) {
+    return index === 1 || $( this ).attr( "id" ) === "fifth";
+  })
+    .css( "border", "3px double red" );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- *****************first()******************** -->
+
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>first demo</title>
+  <style>
+  .highlight {
+    background-color: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<ul>
+  <li>Look:</li>
+  <li>This is some text in a list.</li>
+  <li>This is a note about it.</li>
+  <li>This is another note about it.</li>
+</ul>
+ 
+<script>
+$( "ul li" ).first().addClass( "highlight" );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- ******************.has()********************** -->
+<!-- <html>
+  
+<head>
+    <script 
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    
+    <script>
+        $(document).ready(function() {
+            $("p").has("span").css("background-color", "lightgreen", "bold");
+        });
+    </script>
+    <style>
+        body {
+            width: 50%;
+            height: 100px;
+            border: 2px solid green;
+            padding: 15px;
+            font-size: 19px;
+        }
+    </style>
+</head>
+  
+<body>
+  
+    <p>Geeks <span>for</span> Geeks !</p>
+    <p>I am a <span>content</span> writer.</p>
+    <p>This is a normal paragrap .</p>
+  
+</body>
+  
+</html> -->
+
+<!-- ************.is*********** -->
+<!-- <!DOCTYPE html>
+<html>
+  
+<head>
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+    <script>
+        $(document).ready(function() {
+            $("p").click(function() {
+                if ($("p").parent().is("div")) {
+                    alert("Parent of p is div");
+                }
+            });
+        });
+    </script>
+</head>
+  
+<body>
+    <center>
+        <h1>In H1</h1>
+        <div>
+            <p>Click me to find out if
+           I my parent is a div element.</p>
+        </div>
+    </center>
+</body>
+  
+</html> -->
+
+<!-- ***********.last*********** -->
+
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>last demo</title>
+  <style>
+  .highlight {
+    background-color: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<ul>
+  <li>Look:</li>
+  <li>This is some text in a list.</li>
+  <li>This is a note about it.</li>
+  <li>This is another note about it.</li>
+</ul>
+ 
+<script>
+$( "ul li" ).last().addClass( "highlight" );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- ********map************ -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<title> jQuery map() method </title>  
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>  
+  
+</head>  
+<body>  
+  
+<h1> Welcome to the javaTpoint.com </h1>  
+  
+<h3> It is an example of using jQuery map() method </h3>  
+<p> <b> The original array is: </b> [55, 12, 49, 89, 34, 88]  </p>  
+<p> Click the following button to see the effect. </p>  
+<button> Click me </button>  
+<p id = "p1"> </p>  
+<script>  
+$(document).ready(function(){  
+$("button").click(function(){  
+var array = [55, 12, 49, 89, 34, 88];  
+var newArray = jQuery.map(array, function(val) {  
+return val + 5;  
+});  
+document.getElementById('p1').innerHTML = "<b> The new array is: </b>" + JSON.stringify(newArray);  
+});  
+});  
+</script>  
+</body>  
+  
+</html>   -->
+
+<!-- *********NOT*************** -->
+
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>not demo</title>
+  <style>
+  div {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    float: left;
+    background: yellow;
+    border: 2px solid white;
+  }
+  .green {
+    background: #8f8;
+  }
+  .gray {
+    background: #ccc;
+  }
+  #blueone {
+    background: #99f;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<div></div>
+<div id="blueone"></div>
+<div></div>
+<div class="green"></div>
+<div class="green"></div>
+<div class="gray"></div>
+<div></div>
+ 
+<script>
+$( "div" ).not( ".green, #blueone" )
+  .css( "border-color", "red" );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- slice() -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").slice(2).css("background-color", "yellow");
+});
+</script>
+</head>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+
+<p>My name is Donald (index 0).</p>
+<p>Donald Duck (index 1).</p>
+<p>I live in Duckburg (index 2).</p>
+<p>My best friend is Mickey (index 3).</p>
+
+<div>In this example, we start the selection of p elements from the p element with index position 2. All p elements from this point will be selected. Note that the index numbers start at 0.</div>
+
+</body>
+</html> -->
+
+<!-- *********.add********** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>add demo</title>
+  <style>
+  div {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    float: left;
+  }
+  p {
+    clear: left;
+    font-weight: bold;
+    font-size: 16px;
+    color: blue;
+    margin: 0 10px;
+    padding: 2px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+ 
+<p>Added this... (notice no border)</p>
+ 
+<script>
+$( "div" ).css( "border", "2px solid red" )
+  .add( "p" )
+  .css( "background", "yellow" );
+</script>
+ 
+</body>
+</html> -->
+
+<!-- ************************.addback*************************** -->
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>addBack demo</title>
+  <style>
+  p, div {
+    margin: 5px;
+    padding: 5px;
+  }
+  .border {
+    border: 2px solid red;
+  }
+  .background {
+    background: yellow;
+  }
+  .left, .right {
+    width: 45%;
+    float: left;
+  }
+  .right {
+    margin-left: 3%;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<div class="left">
+  <p><strong>Before <code>addBack()</code></strong></p>
+  <div class="before-addback">
+    <p>First Paragraph</p>
+    <p>Second Paragraph</p>
+  </div>
+</div>
+<div class="right">
+  <p><strong>After <code>addBack()</code></strong></p>
+  <div class="after-addback">
+    <p>First Paragraph</p>
+    <p>Second Paragraph</p>
+  </div>
+</div>
+ 
+<script>
+$( "div.left, div.right" ).find( "div, div > p" ).addClass( "border" );
+ 
+// First Example
+$( "div.before-addback" ).find( "p" ).addClass( "background" );
+ 
+// Second Example
+$( "div.after-addback" ).find( "p" ).addBack().addClass( "background" );
+</script>
+ 
+</body>
+</html> -->
