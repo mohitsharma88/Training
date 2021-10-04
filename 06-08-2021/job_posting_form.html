@@ -9,24 +9,22 @@
             <a href="job_posting_form.html">Personal Information</a>
         </div>
         <hr>
-        <form>
-            <label>First Name:</label>
-            <input type="text" name="fname" required placeholder="First Name"><br><br>
-            <label>Middle Name:</label>
-            <input type="text" name="mname" required placeholder="Middle Name"><br><br>
-            <label>Last Name:</label>
-            <input type="text" name="lname" required placeholder="Last Name"><br><br>
-            <label>Gender:</label>
-            <input type="radio" name="male" value="Male">
-            <label>Male</label>
-            <input type="radio" name="female" value="female">
-            <label>Female</label>
-            <input type="radio" name="other" value="other">
-            <label>Other</label><br><br>
-            <label>Personal Email:</label>
-            <input type="email" name="email" placeholder="Email"><br><br>
-            <label>Contact no:</label>
-            <select  name="country_code" class="form-control" autocomplete="off">
+        <div>
+          <ul>
+            <li>  <label>First Name:</label> <input type="text" name="fname" required placeholder="First Name"></li>
+            <li><label>Middle Name:</label><input type="text" name="mname" required placeholder="Middle Name"><br></li>
+            <li><label>Last Name:</label><input type="text" name="lname" required placeholder="Last Name"><br></li>
+            <li><label>Gender:</label>
+                <input type="radio" name="male" value="Male">
+                <label>Male</label>
+                <input type="radio" name="female" value="female">
+                <label>Female</label>
+                <input type="radio" name="other" value="other">
+                <label>Other</label><br><br></li>
+            <li><label>Personal Email:</label>
+            <input type="email" name="email" placeholder="Email"><br><br></li>
+            <li></li><label>Contact no:</label>
+            <select  name="country_code" class="form-control" autocomplete="off" style="width:4em"  >
                 <option value="">Select</option>
                 <option value="213">Algeria (+213)</option>
                 <option value="376">Andorra (+376)</option>
@@ -250,15 +248,15 @@
                 <option value="263">Zimbabwe (+263)</option>
             </select>
             <input type="number" name="numbe1" required placeholder="1234567890" maxlength="10">
-            <input type="number" name="number2" required placeholder="Alternet Mo.No" maxlength="10"><br><br>
-            <label>Date Of Birth</label>
-            <input type="date" name="Birthdate"><br><br>
-            <label>Material Status</label>
+            <input type="number" name="number2" required placeholder="Alternet Mo.No" maxlength="10"><br><br></li>
+            <li><label>Date Of Birth</label>
+            <input type="date" name="Birthdate"></li><br>
+            <li></li><label>Material Status</label>
             <input type="radio" name="Single" value="single">
             <label>Single</label>
             <input type="radio" name="Married" value="Married">
-            <label>Married</label><br><br>
-            <label>State</label>
+            <label>Married</label><br><br></li>
+            <li><label>State</label>
             <select name="state" id="state" class="form-control">
                 <option value="Andhra Pradesh">Andhra Pradesh</option>
                 <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -296,44 +294,44 @@
                 <option value="Uttar Pradesh">Uttar Pradesh</option>
                 <option value="Uttarakhand">Uttarakhand</option>
                 <option value="West Bengal">West Bengal</option>
-                </select><br><br>
-            <label for="">Corespondence Address:</label>
-            <input type="text" column="20" row="20"><br><br>
-            <label for="">Permanent Address :</label>
-            <input type="text" column="20" row="20"><br><br>
-            <label for="">Zipcode:</label>
-            <input type="number" maxlength="6" placeholder="123456"><br><br>
-            <label for="">AdharID:</label>
-            <input type="Number" name="adhar" id="" maxlength="12" required><br><br>
-            <label for="">Hobies:</label> 
-            <input type="text" name="hobies" id="" placeholder="cricket,Reading,Taveling"><br><br>
-            <label for="">Ready to Relocate:</label>
+                </select><br> </li> 
+            <li><label for="">Corespondence Address:</label>
+            <input type="text" column="20" row="20"><br></li>
+            <li><label for="">Permanent Address :</label>
+            <input type="text" column="20" row="20"><br></li>
+            <li></li><label for="">Zipcode:</label>
+            <input type="number" maxlength="6" placeholder="123456"><br></li>
+            <li><label for="">AdharID:</label>
+            <input type="Number" name="adhar" id="" maxlength="12" required><br></li>
+            <li><label for="">Hobies:</label> 
+            <input type="text" name="hobies" id="" placeholder="cricket,Reading,Taveling"><br></li>
+           <li></li> <label for="">Ready to Relocate:</label>
             <input type="Radio" name="yes" id="">
             <label for="">Yes</label>
             <input type="Radio" name="No" id="">
-            <label for="">No</label><br><br>
-            <label for="">Which city do you prefer:</label>
-            <input type="text" name="city" id="" placeholder="Pune,Mumbai,Ahemadabad"><br><br>
-            <label for="">HSC Marks in %:</label>
-            <input type="Number" name="HSCmarks" id=""><br><br>
-            <label for="">SSC Marks %:</label>
-            <input type="Number" name="SScmarks" id=""><br><br>
-            <label for="">Graduation or Diploma Name with Marks in %:</label>
-            <input type="text" name="Degree" id=""><br><br>
-            <label for="">Post Graduation Name with Marks %:</label>
-            <input type="text" name="marks" id=""><br><br>
-            <label for="">Shift:</label>
+            <label for="">No</label><br><br></li>
+            <li><label for="">Which city do you prefer:</label>
+            <input type="text" name="city" id="" placeholder="Pune,Mumbai,Ahemadabad"><br></li>
+           <li><label for="">HSC Marks in %:</label>
+            <input type="Number" name="HSCmarks" id=""><br></li>
+            <li></li><label for="">SSC Marks %:</label>
+            <input type="Number" name="SScmarks" id=""><br></li>
+           <li><label for="">Graduation or Diploma Name with Marks in %:</label>
+            <input type="text" name="Degree" id=""><br></li>
+            <li><label for="">Post Graduation Name with Marks %:</label>
+            <input type="text" name="marks" id=""><br></li>l
+           <li><<label for="">Shift:</label>
             <input type="radio">
             <label for="">Day</label>
-            <input type="radio">
+           <input type="radio">
             <label for="">Night</label>
             <input type="radio">
-            <label for="">Both</label><br><br>
-            <label for="">Skils:</label>
-            <input type="text"><br><br>
-            <label for="">Hands on Technology</label>
-            <input type="checkbox">
-            <label for="">c</label><br>
+            <label for="">Both</label><br></li>
+            <li><label for="">Skils:</label>
+            <input type="text"><br></li>
+            <li><label for="">Hands on Technology</label>
+            <input type="checkbox"></li>
+            <li><label for="">c</label><br>
             <input type="checkbox">
             <label for="">c++</label><br>
             <input type="checkbox">
@@ -356,22 +354,24 @@
             <label for="">Golang</label><br>
             <input type="checkbox">
             <label for="">R</label><br>
-            <input type="checkbox">
+            <input type="checkbox"></li>
             <label for="">swift</label><br><br>
-            <label for="">How many project done in academics:</label>
-            <input type="number"><br><br>
-            <label for="">Project Detail in 50 words:</label>
-            <input type="number" row="30" column="30"><br><br>
-            <label for="">communication rating:</label>
-            <input type="range"><br><br>
-            <label for="">Any work experience</label>
-            <input type="number"><br><br>
-            <label for="">Passport size Photo(less than 60kb)</label>
-            <input type="file" name="" id=""><br><br>
+            <li><label for="">How many project done in academics:</label>
+            <input type="number"><br></li>
+            <li><label for="">Project Detail in 50 words:</label>
+            <input type="number" row="30" column="30"><br></li>
+            <li></li><label for="">communication rating:</label>
+            <input type="range"><br></li>
+            <li> <label for="">Any work experience</label>
+            <input type="number"><br></li>
+            <li><label for="">Passport size Photo(less than 60kb)</label>
+            <input type="file" name="" id=""><br><br></li>
             <hr>
-            <input type="Submit">
-            <input type="reset" name="" id="">
-    
-        </form>
+            <li><input type="Submit"></li>
+            <li><input type="reset" name="" id=""></li>
+   </ul>
+
+    </div>
+        
     </body>
 </html>

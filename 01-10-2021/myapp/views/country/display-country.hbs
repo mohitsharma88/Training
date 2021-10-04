@@ -1,0 +1,83 @@
+<html>
+  <script>
+    function ConfirmDelete() 
+    {
+        var x = confirm("Are you sure you want todelete?");
+        if (x)
+         return true; 
+        else
+         return false; 
+    }
+  </script>
+  <body>
+    {{!-- {{include('../header');}}   --}}
+
+    <h1>Display Table</h1>
+
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Country Name</th>
+        
+        <th>Action</th>
+      </tr>
+      {{#each country_array}}
+        <tr>
+          <td> {{_id}} </td>
+          <td>{{c_name}}</td>
+          {{!-- <td>{{c_mobile}} </td> --}}
+          <td>
+            <a href="/country/edit/{{_id}}">Edit</a>
+            |
+            <a href="/country/delete/{{_id}}" Onclick="ConfirmDelete()">Delete</a>
+            |
+            <a href="/country/show/{{_id}}">Show</a>
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+
+  </body>
+</html>
+
+{{!-- <html>
+  <script>
+    function ConfirmDelete() 
+    {
+        var x = confirm("Are you sure you want todelete?");
+        if (x)
+         return true; 
+        else
+         return false; 
+    }
+  </script>
+  <body> --}}
+    {{!-- {{include('../header');}}   --}}
+
+    {{!-- {{!-- <h1>Display Table</h1>
+
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Country Name</th>
+        <th>Action</th>
+      </tr>
+      {{#each country_array}}
+        <tr>
+            <td>{{@index}}</td>
+          <td> {{_id}} </td>
+          <td>{{c_name}}</td> --}}
+         {{!-- <td>{{c_mobile}} </td> --}}
+          {{!-- <td>
+            <a href="/country/edit/{{_id}}">Edit</a>
+            |
+            <a href="/country/delete/{{_id}}" Onclick="ConfirmDelete()">Delete</a>
+            |
+            <a href="/country/show/{{_id}}">Show</a>
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+
+  </body>
+</html>  --}}

@@ -1,0 +1,32 @@
+<html>
+<body>
+{{!-- {{include('../header');}}  --}}
+    <form method="post" action="add">
+        <h1>Add SubCategory Record</h1>
+        <table>
+            <tr>
+                <td>SubCatName</td>
+                <td> <input type="text" placeholder="Enter Sub-Category" name="s_name"></td>
+            </tr>
+            <tr>
+                <td>Catgory</td>
+                <td> 
+                    <select name="_category">
+                     
+                       {{#each category_array}}
+                            <option value="{{this._id}}">{{this.c_name}}</option>
+                            {{!-- <option value="{{this._id}}">{{this.c_mobile}}</option> --}}
+                       {{/each}}
+                           
+                        </select>
+                </td>
+            </tr
+           
+            <tr>
+                <td><input type="submit"></td>
+                <td><input type="reset"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

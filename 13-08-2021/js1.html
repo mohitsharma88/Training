@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function mesg()
+        {   
+            alert("Jay Ganesh")
+        }
+    </script>
+</head>
+<body onload="mesg()">
+    <script type="text/javascript">
+        document.write("Hello World");
+        var y=5;
+        var x=0;
+        var z=0;
+        var z=x+y;//5
+        document.write(z);
+        document.write("<br />");
+
+        var z=x-y;//0
+        document.write(z);
+        document.write("<br />");
+
+        var z=2*y;//0
+        document.write(z);
+
+        var name="mohit";
+        var surename="sharma";
+        document.write(name+" "+surename);
+        document.write("<br />");
+
+        var fullname=name+" "+surename;
+        document.write(fullname);
+        document.write("<br>");
+
+        var d= new Date();
+        var time=d.getHours();
+
+        if(time < 10)
+        {
+            document.write("good Morning");
+        }
+        else
+        {
+            document.write("Good Afternoon");
+
+        }
+
+        var obj=new Date();
+        var hr=obj.getHours();
+        var min=obj.getMinutes();
+        var sec=obj.getSeconds();
+        var mls=obj.getMilliseconds();
+        document.write(hr +" "+ min +" "+ sec +" "+ mls +" ");
+
+    </script>
+</body>
+
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Ck editor</title>
+  <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+</head>
+
+<body>
+  <textarea cols="80" id="t1" name="editor1" rows="10" style="height: 400;" data-sample-short></textarea>
+  <script>
+    CKEDITOR.replace('t1', {
+      height: 100,
+      width:550,
+      baseFloatZIndex: 10005
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<html>
+  <body>
+    <form method="post">
+      <table>
+        <tr>
+          <td><label for="product name">Product Name</label>
+            <input type="text" name="p_name" value="{{ product_array.p_name }}" required/><br><br></td>
+        </tr>
+        <tr>
+          <td><label for="product Details">Product Details</label>
+            <input type="text" name="p_details"  value="{{ product_array.p_details }}"  required /> <br /><br/></td>
+        </tr>
+        <tr>
+          <td><label for="product price">Product Price</label>
+            <input type="number" name="p_price"  value="{{ product_array.p_details }}" required/><br /><br /></td>
+        </tr>
+        <tr>
+          <td><label for="product image">Product Image</label>
+            <input type="file" name="file123" value="{{ product_array.file123 }}" required /><br /><br /></td>
+        </tr>
+        <tr>
+          <td><label for="product qty">Product Qty</label>
+            <input type="number" name="p_qty" value="{{ product_array.p_qty }}" required  /><br /><br /></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" />
+            <input
+              type="button"
+              value="Display"
+              onclick="window.location='display';"
+            />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

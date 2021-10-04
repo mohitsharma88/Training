@@ -1,0 +1,66 @@
+<html>
+<body>
+<form method="post" >
+<table>
+        <tr>
+            <td>Name Country: </td>
+            <td><input type="text" name="c_name" placeholder="Enter name"
+                value=" {{country_array.c_name}} " required> </td>
+        </tr>
+        {{!-- <tr>
+                <td>Mobile No</td>
+                <td><input type="number" placeholder="Enter Mobile No" 
+                value="{{category_array.c_mobile}}"
+                    name="c_mobile" required></td>
+            </tr> --}}
+        <tr>
+                <td> <input type="submit">
+                  <input type="button" value="Display" 
+                  onclick="window.location='display';"> </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+
+{{!-- <html>
+  <script>
+    function ConfirmDelete() 
+    {
+        var x = confirm("Are you sure you want todelete?");
+        if (x)
+         return true; 
+        else
+         return false; 
+    }
+  </script>
+  <body> --}}
+    {{!-- {{include('../header');}}   --}}
+
+    {{!-- <h1>Display Table</h1>
+
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>country Name</th>
+        <th>Action</th>
+      </tr>
+      {{#each country_array}}
+        <tr>
+            <td>{{@index}}</td>
+          <td> {{_id}} </td>
+          <td>{{c_name}}</td> --}}
+          {{!-- <td>{{c_mobile}} </td> --}}
+          {{!-- <td>
+            <a href="/country/edit/{{_id}}">Edit</a>
+            |
+            <a href="/country/delete/{{_id}}" Onclick="ConfirmDelete()">Delete</a>
+            |
+            <a href="/country/show/{{_id}}">Show</a>
+          </td>
+        </tr>
+      {{/each}}
+    </table>
+
+  </body>
+</html> --}}

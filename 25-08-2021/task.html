@@ -1,0 +1,230 @@
+<html>
+<!-- <script>
+        obj = Calc(10).add(5).mult(2).div(3).sub(2);
+        alert(obj); //8
+</script> -->
+
+<!-- <head>
+    <title>Practice Task</title>
+    <script type="text/javascript">
+        var obj = function() {
+            this.i = 10;
+            this.add = function(i) {
+                this.i += i;
+            };
+            this.mul = function(i) {
+                this.i *= i;
+            };
+            this.div = function(i) {
+                this.i /= i;
+            };
+            this.sub = function(i) {
+                this.i -= i;
+            };
+            this.print = function() {
+                alert(this.i);
+                console.log(this.i);
+            };
+        };
+        var ans = new obj();
+        // ans.add(5).mul(2).div(3).sub(2);
+        ans.add(5);
+        ans.mul(2);
+        ans.div(3);
+        ans.sub(2);
+        ans.print();
+    </script>
+</head>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"
+        type="text/javascript"></script>
+    <title>Jquery Chosen Example</title>
+    <style>
+        body{
+            text-align: center;
+            font-size: larger;
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Example of Jquery Chosen</h1>
+    <h3>Select any one color</h3>
+    <select>
+        <option>Red</option>
+        <option>Green</option>
+        <option>Yellow</option>
+        <option>Blue</option>
+        <option>Orange</option>
+        <option>Black</option>
+        <option>White</option>
+        <option>Aqua</option>
+        <option>Cyan</option>
+    </select>
+    <br><br>
+    <h3>Select multiple colors</h3>
+    <select multiple>
+        <option>Red</option>
+        <option>Green</option>
+        <option>Yellow</option>
+        <option>Blue</option>
+        <option>Orange</option>
+        <option>Black</option>
+        <option>White</option>
+        <option>Aqua</option>
+        <option>Cyan</option>
+    </select>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("select").chosen({ width: "300px" });
+    });
+</script>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+   
+ <script src="https://cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    </head>
+<body> 
+
+  <textarea name="editor1" id="editor1" rows="10" cols="40">
+   
+  </textarea>
+  <script>
+   CKEDITOR.replace( 'editor1' );
+  </script>
+  
+  <input name="file" type="file" id="files" class="form-control" value="">
+
+  <script type="text/javascript">
+    function readTextFile(file, callback, encoding) {
+   var reader = new FileReader();
+   reader.addEventListener('load', function (e) {
+    callback(this.result);
+   });
+   if (encoding) reader.readAsText(file, encoding);
+   else reader.readAsText(file);
+  }
+
+  function fileChosen(input, output) {
+   if (input.files && input.files[0]) {
+    readTextFile(
+     input.files[0],
+     function (str) {
+      output.value = str;
+     }
+    );
+   }
+  }
+
+//   $('#files').on('change', function () {
+//   var result = $("#files").text();
+   
+//    fileChosen(this, document.getElementById('editor1'));
+//    CKEDITOR.instances['editor1'].setData(result);
+//   });
+  </script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<!-- https://ckeditor.com/ckeditor-4/download/?null-addons= -->
+<!-- <head> -->
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CK Editor</title> -->
+    <!-- <style>
+        * {
+            background-color: gray;
+        }
+        
+        .container {
+            width: 50%;
+            margin-top: 5%;
+            margin-left: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <textarea name="content"></textarea>
+    </div>
+
+    <script src="ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('content');
+    </script>
+</body>
+
+</html>  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"
+        type="text/javascript"></script>
+    <title>Hobby</title>
+    <style>
+        body{
+            text-align: left;
+            font-size: larger;
+            background-color: rgb(223, 235, 235);
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <label for="Name">Hobby:</label>
+    </p>
+    <select>
+        <option>Investing</option>
+        <option>Thrifting</option>
+        <option>Reading</option>
+        <option>Rock Sport</option>
+        <option>Car Restoration</option>
+        
+    </select>
+    <br><br>
+    <h3>Select multiple Hobby</h3>
+    <select multiple>
+        <option>Investing</option>
+        <option>Thrifting</option>
+        <option>Reading</option>
+        <option>Rock Sport</option>
+        <option>Car Restoration</option>
+        
+    </select>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("select").chosen({ width: "200px"  });
+    });
+</script>
+
+</html>

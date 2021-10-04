@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
+  
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+   
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css">
+
+    <script>
+         $(document).ready(function() {
+            $('#example').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'excel', 'pdf', 'print'
+                ]
+            });
+        });
+    </script>
+     <script>$(document).ready(function() {
+        $('#example').DataTable();
+    } );</script>
+</head>
+<body>
+    <h1>DataTable</h1>
+    <table id="example" class="display" style="width:120%">
+        <thead>
+            <tr>
+                <th>UserId</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1001</td>
+                <td>kiran</td>
+                <td>Software </td>
+                <td>MH</td>
+                <td>23</td>
+                <td>2008/19/6</td>
+                <td>19,500</td>
+            </tr>
+            <tr>
+                <td>1002</td>
+                <td>kishor</td>
+                <td>developer</td>
+                <td>Nsk</td>
+                <td>31</td>
+                <td>2001/10/26</td>
+                <td>122,500</td>
+            </tr>
+            <tr>
+                <td>1003</td>
+                <td>Suchit</td>
+                <td>support</td>
+                <td>Mumbai</td>
+                <td>21</td>
+                <td>2019/10/26</td>
+                <td>42,500</td>
+            </tr>
+            <tr>
+                <td>1004</td>
+                <td>mohit</td>
+                <td>Team Leader</td>
+                <td>Maharashtra</td>
+                <td>20</td>
+                <td>2021/10/26</td>
+                <td>18,500</td>
+            </tr>
+            <tr>
+                <td>1004</td>
+                <td>rahul</td>
+                <td>Team Leader</td>
+                <td>Gujrat</td>
+                <td>22</td>
+                <td>2011/10/26</td>
+                <td>80,500</td>
+            </tr>
+            <tr>
+                <td>1004</td>
+                <td>radhe</td>
+                <td>tester</td>
+                <td>Dattwadi</td>
+                <td>13</td>
+                <td>2011/10/26</td>
+                <td>80,500</td>
+            </tr>
+            <tr>
+                <td>1004</td>
+                <td>mayur</td>
+                <td>Team managment</td>
+                <td>maharashtra</td>
+                <td>19</td>
+                <td>2011/10/26</td>
+                <td>80,500</td>
+            </tr>
+            <tr>
+                <td>1005</td>
+                <td>sachin</td>
+                <td>tester</td>
+                <td>Sinnar</td>
+                <td>23</td>
+                <td>2011/10/26</td>
+                <td>80,500</td>
+            </tr>
+            <tr>
+                <td>1006</td>
+                <td>rahul</td>
+                <td>developer</td>
+                <td>Kothrud</td>
+                <td>27</td>
+                <td>2011/10/26</td>
+                <td>80,500</td>
+            </tr>
+            <tr>
+                <td>1007</td>
+                <td>dnyneshwar</td>
+                <td>Team Leader</td>
+                <td>Shirdi</td>
+                <td>34</td>
+                <td>2011/10/26</td>
+                <td>80,500</td>
+            </tr>
+            <tr>
+                <td>1008</td>
+                <td>pinks</td>
+                <td>Team support</td>
+                <td>Niphad</td>
+                <td>31</td>
+                <td>2011/10/26</td>
+                <td>80,500</td>
+            </tr>
+            <tr>
+                <td>1009</td>
+                <td>rohit</td>
+                <td>manager</td>
+                <td>Nashik</td>
+                <td>22</td>
+                <td>2011/10/26</td>
+                <td>80,500</td>
+            </tr> 
+            <tr>
+                <td>1010</td>
+                <td>ram</td>
+                <td>Team Leader</td>
+                <td>Aurangabadd</td>
+                <td>31</td>
+                <td>2011/10/26</td>
+                <td>80,500</td>
+            </tr>
+            <tr> <td>1011</td>
+                <td>shubham</td>
+                <td>Team Leader</td>
+                <td>Satana</td>
+                <td>46</td>
+                <td>2011/10/26</td>
+                <td>80,500</td>
+            </tr>
+            <tr> <td>1012</td>
+                <td>mohit</td>
+                <td>Team Leader</td>
+                <td>maharashtra</td>
+                <td>26</td>
+                <td>2011/10/26</td>
+                <td>80,500</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>UserId</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+                
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

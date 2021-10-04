@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Form</title>
+        <a href="reg">Signup</a>
+        <a href="displaystud">Display</a>
+    </head>
+    <body>
+        <form method="post" >
+        Name:<input type="text" value="{{mydata.stud_name}}" name="nm"><br><br>
+        Mobile:<input type="text" value="{{mydata.stud_mobile}}" name="mno"><br><br>
+        Age:<input type="number" value="{{mydata.stud_age}}" name="age"><br><br>
+        {{!-- Gender : Male<input type="radio" value="{{mydata.stud_gender}}" name="male">
+        Female<input type="radio" value="{{mydata.stud_gender}}" name="female"><br><br> --}}
+        Subject:<input type="text" value="{{mydata.stud_subject}}" name="sub"><br><br>
+        <input type="submit"/>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <script>
+        class Calculator
+        {
+            constructor(iNo)
+            {
+                this.iNo = iNo;
+            }
+            add(iNo)
+            {
+                this.iNo = this.iNo + iNo;
+                return this;
+            }
+            sub(iNo)
+            {
+                this.iNo = this.iNo - iNo;
+                return this;
+            }
+            mul(iNo)
+            {
+                this.iNo = this.iNo * iNo;
+                return this;
+            }
+            div(iNo)
+            {
+                this.iNo = this.iNo / iNo;
+                return this;
+            }
+            toString(){
+                return this.iNo;
+            }
+        }
+        calculator = new Calculator(10).add(5).mul(2).div(3).sub(2) 
+        alert(calculator)
+    </script>
+<body>
+</body>
+</html>

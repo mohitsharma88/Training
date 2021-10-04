@@ -1,0 +1,18 @@
+<html>
+<body>
+    <p>technologies</p>
+    <ul>
+        <li name="list">C Programming</li>
+        <li name="list">CPP</li>
+        <li name="list">JAVA</li>
+        <li>PYTHON</li>
+    </ul>
+    <script type="text/javascript">
+        let elements = document.getElementsByName("list");
+        console.log(elements); // [li, li, li]
+        console.log(elements[0]); // <li name="list">C Programming</li>  
+        console.log(elements[1]); // <li name="list">CPP</li>
+        console.log(elements[2]); // <li name="list">Java</li>
+    </script>
+</body>
+</html>

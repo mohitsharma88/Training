@@ -1,0 +1,20 @@
+Record Found {{ user_array.length }}
+<table border='1'>
+    <thead>
+        <th>Username</th>
+        <th>email</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+    {{#each user_array}}
+        <tr>
+            <td>{{user_name}}</td>
+            <td>{{user_mobile}}</td>
+            <td><a href="edit/{{_id}}">Edit</a>
+            <a href="delete/{{_id}}">Delete</a></td>
+        </tr>
+    {{else}}
+            No Record Found
+    {{/each}}        
+    </tbody>
+</table>

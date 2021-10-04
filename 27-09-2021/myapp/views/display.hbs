@@ -1,0 +1,36 @@
+<style>
+    table {
+    counter-reset: tableCount;     
+}
+.counterCell:before {              
+    content: counter(tableCount); 
+    counter-increment: tableCount; 
+}
+</style>
+
+<h1>Display</h1>
+{{mydata.length}} Records Found
+
+<table border='1'>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Action</th>
+    </tr>
+
+{{#each mydata}}
+    <tr>
+    <td class="counterCell"></td>
+    <td>{{user_name}}</td>
+    <td>{{user_mobile}}</td>
+    <td>
+        <a href="/edit/{{_id}}">Edit</a> |
+        <a href="/delete/{{_id}}" onclick="return confirm('Are you sure?')">Delete</a>
+
+    </td>
+    </tr>
+{{/each}}
+
+
+</table>
