@@ -8,7 +8,7 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 var session = require('express-session')
 const nodemailer = require("nodemailer");
-var fileupload = require("express-fileupload")
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');

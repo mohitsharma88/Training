@@ -199,31 +199,31 @@ router.get('/product', function(req, res, next) {
   res.render('product');
 });
 
-router.post('/add', function (req, res, next) {
-  console.log(req.body);
+router.post('/add', function(req, res, next) {
+  var myfile = req.files.p_img;
+var myfilename = req.files.p_img.name;
+myfile.mv('public/images/'+myfilename, function(err) {
+  if (err)
+  throw err;
+  //res.send('File uploaded!');
+  });
 
-  var fileobject = req.files.file123;
-  var filename = req.files.file123.name;
-
-  //Create an Array 
-  const mybodydata1 = {
-    p_name : req.body.p_name,
-    p_details : req.body.p_details,
-    p_price : req.body.p_price,
-    file123 : filename,
-    p_qty : req.body.p_qty
+  console.log("File Send Success")
+  const mybodydata = {
+    p_name:req.body.p_name,
+    p_details:req.body.p_details,
+    p_price:req.body.p_price,
+    p_img:myfilename,
+    p_qty:req.body.p_qty
   }
-  var data = ProductModel(mybodydata1);
+  var data = ProductModel(mybodydata);
 
-  data.save(function (err) {
-    if (err) {
-      console.log("Error in Insert Record" + err);
-    } else {
-      console.log("Insert Succesfully")
-      fileobject.mv('public/upload/'+filename,function(err){
-        if(err) throw err;
-        res.redirect('product'); 
-      });
+  data.save(function(err){
+    if(err){
+      console.log("Error in Add Record" + err);
+    }else{
+      console.log("Record Added");
+      res.send("Record Successfully Added")
     }
   })
 
