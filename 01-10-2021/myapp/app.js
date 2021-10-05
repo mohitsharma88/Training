@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Db Connection Start 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/dropdown', { useNewUrlParser: true })
+mongoose.connect('mongodb://mydb:mydb@localhost:27017/dropdown', { useNewUrlParser: true })
 .then(() => console.log('connection succesful'))
 .catch((err) => console.error(err)) 
 //DB Connection End
