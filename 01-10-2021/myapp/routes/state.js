@@ -89,8 +89,6 @@ router.get('/show/:id', function(req, res) {
       if (err) {
           console.log("Error in Single Record Fetch" + err);
       } else {
-
-        
           console.log(db_state_array);
 
           res.render('state/single-state-record', { state_array: db_state_array });

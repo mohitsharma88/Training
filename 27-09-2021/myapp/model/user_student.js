@@ -10,4 +10,4 @@ var myschema = new Schema({
 
 });
 
-module.exports = mongoose.model('stud',myschema);
+module.exports = mongoose.model('student',myschema);

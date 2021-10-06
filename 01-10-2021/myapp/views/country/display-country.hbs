@@ -1,4 +1,11 @@
 <html>
+  <head>
+        <head>
+    <a href="add">Add Country</a> | <a href="display">Display Country</a> <br>
+    <a href="../state/add">Add State</a> | <a href="../state/display">Display State</a><br>
+    <a href="../city/add">Add City</a> | <a href="../city/display">Display City</a>
+</head>
+  </head>
   <script>
     function ConfirmDelete() 
     {
@@ -12,7 +19,7 @@
   <body>
     {{!-- {{include('../header');}}   --}}
 
-    <h1>Display Table</h1>
+    <h1>Display Country Table</h1>
 
     <table border="1">
       <tr>
@@ -30,7 +37,7 @@
             <a href="/country/edit/{{_id}}">Edit</a>
             |
             <a href="/country/delete/{{_id}}" Onclick="ConfirmDelete()">Delete</a>
-            |
+          
             <a href="/country/show/{{_id}}">Show</a>
           </td>
         </tr>

@@ -1,0 +1,32 @@
+<html>
+<body>
+{{!-- {{include('../header');}}  --}}
+    <form method="post" action="add">
+        <h1>Add City Record</h1>
+        <table>
+            <tr>
+                <td>CityName</td>
+                <td> <input type="text" placeholder="Enter Cityname" name="city_name"></td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td> 
+                    <select name="_state">
+                     
+                       {{#each state_array}}
+                            <option value="{{this._id}}">{{this.s_name}}</option>
+                            {{!-- <option value="{{this._id}}">{{this.c_mobile}}</option> --}}
+                       {{/each}}
+                           
+                        </select>
+                </td>
+            </tr
+           
+            <tr>
+                <td><input type="submit"></td>
+                <td><input type="reset"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -76,6 +76,19 @@ router.post('/login', function (req, res, next) {
   });
 });
 
+// //display
+// router.get('/display',function(req, res, next){
+//   SignupModel.find(function(err, data){
+//       console.log(data);
+
+//       SignupModel.find({})
+//       // .populate('_category')
+//       .exec(function(err, data){
+//               console.log("Successfully display"+data);
+//               res.render('table',{mydata : data});
+//       })
+//   }).lean();
+// })
 
 
 module.exports = router;

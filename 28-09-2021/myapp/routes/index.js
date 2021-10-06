@@ -75,6 +75,48 @@ router.post('/login', function (req, res, next) {
     }
   });
 });
+
+//Get Single User for Edit Record
+router.get('/edit-table/:id', function (req, res) {
+
+  console.log(req.params.id);
+
+  UsersModel.findById(req.params.id, function (err, db_users_array) {
+    if (err) {
+      console.log("Edit Fetch Error " + err);
+    } else {
+      console.log(db_users_array);
+
+      res.render('edit-table', { user_array: db_users_array });
+    }
+  });
+});
+
+//Update Record Using Post Method
+router.post('/edit-table/:id', function (req, res) {
+
+  console.log("Edit ID is" + req.params.id);
+
+  const mybodydata = {
+    user_name : req.body.user_name ,
+    user_gender : req.body.user_gender,
+    user_mobile : req.body.user_mobile,
+    user_email : req.body.user_email,
+    user_dob : req.body.user_dob,
+    user_password : req.body.user_password,
+    user_isadmin : req.body.user_isadmin
+  }
+  UsersModel.findByIdAndUpdate(req.params.id, mybodydata, function (err) {
+    if (err) {
+      console.log("Error in Record Update");
+      res.redirect('/display-table');
+    } else {
+
+      res.redirect('/display-table');
+    }
+  });
+});
+
 //Display
 router.get('/display-table', function (req, res, next) {
 
@@ -87,6 +129,34 @@ router.get('/display-table', function (req, res, next) {
       //Render User Array in HTML Table
       res.render('display-table', { user_array: db_users_array });
 
+    }
+  });
+});
+
+router.get('/show-user/:id', function (req, res) {
+  console.log(req.params.id);
+  UsersModel.findById(req.params.id, function (err, db_users_array) {
+    if (err) {
+      console.log("Error in Single Record Fetch" + err);
+    } else {
+      console.log(db_users_array);
+
+      res.render('single-record-user', { user_array: db_users_array });
+    }
+  });
+});
+
+//Delete User By ID
+router.get('/delete-user/:id', function (req, res) {
+  UsersModel.findOneAndDelete(req.params.id, function (err, project) {
+    if (err) {
+
+      console.log("Error in Record Delete " + err);
+      res.redirect('/display-table');
+    } else {
+
+      console.log(" Record Deleted ");
+      res.redirect('/display-table');
     }
   });
 });

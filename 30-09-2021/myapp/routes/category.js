@@ -9,7 +9,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+
 router.get('/add', function(req, res, next) {
+  // res.send("connection to category")
   res.render('category/add-category');
 });
 

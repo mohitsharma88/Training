@@ -8,8 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/mydb')
-.then(()=>console.log("Connection Established"))
+mongoose.connect('mongodb://myproject:myproject@localhost:27017/myproject')
+.then(()=>console.log("Connection Open"))
 .catch(()=>console.log("Error"))
 
 var app = express();
