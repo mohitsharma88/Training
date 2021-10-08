@@ -5,13 +5,17 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const exphbs = require('express-handlebars');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var adminRouter = require('./routes/admin');
 //MongoDB Connection
 var mongoose = require('mongoose');
 var fileUpload = require('express-fileupload');
+// const nodemailer = require("nodemailer");
 var session = require('express-session')
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var adminRouter = require('./routes/admin');
+
+
 var app = express();
 
 
@@ -23,15 +27,8 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 
-//Db Connection Start 
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://adminpart:adminpart@localhost:27017/adminpart')
-.then(()=>console.log("Connection Open"))
-.catch(()=>console.log("Error"))
-//DB Connection End
 
-app.use(session({ secret: 'keyboard cat', cookie: { maxAge:
-  60000 }}))
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -39,6 +36,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(fileUpload());
+
+app.use(session({ secret: 'keyboard cat', cookie: { maxAge:
+  60000 }}))
+
+//Db Connection Start 
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://adminpart:adminpart@localhost:27017/adminpart')
+.then(()=>console.log("Connection Open"))
+.catch(()=>console.log("Error"))
+//DB Connection End  
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin',adminRouter);
