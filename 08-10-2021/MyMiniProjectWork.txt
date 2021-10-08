@@ -1,0 +1,121 @@
+Category
+---------
+CategoryName
+
+SubCategory
+-----------
+SubCategoryName
+_category
+
+Product
+-------
+ProductName
+ProductDetails
+ProductPrice
+ProductImage
+_subcategory
+ 
+
+State
+------
+StateName
+
+City
+-----
+CityNane
+_State
+
+
+Area
+-----
+AreaNane
+_City
+
+User
+----
+username
+usergender
+UserEmail
+UserPassword
+UserAddresss
+userphoto
+_area
+
+---------------------------
+Note: 
+Create Single Express JS Project 
+
+Operation
+---------
+All Table CRUD
+Only Admin Login Change Password Forgot Password Profile Update
+
+
+Theme
+------
+Admin LTE 3
+	Sidebar
+		Expandable Menu
+
+https://adminlte.io/themes/dev/AdminLTE/pages/forms/general.html		
+
+models
+	admin.js
+	user.js
+	category.js
+	subcategory.js
+		so on
+
+Routes:
+-------
+	admin.js
+		add
+		view
+		delete
+		login
+		fp
+	category.js
+		add display delete
+
+
+
+Route (Navigation) in URL
+------------
+	admin/login
+	admin/dashboard
+	admin/changepassword
+	admin/forgotpassword
+
+	admin/category/add
+	admin/category/display
+	admin/category/edit
+
+	admin/subcategory/add
+	admin/subcategory/display
+	admin/subcategory/edit
+
+	Follow Same Pattern for All Models
+
+View:
+-------
+	admin	
+		account
+			login.hbs
+			dashboard.hbs
+			forgotpassword.hbs
+			changepassword.hbs
+		category
+			add.hbd
+			view.hbs
+			edit.hbs
+
+public
+------
+	admin
+		all admin assets in admin folder
+
+		
+
+
+
+

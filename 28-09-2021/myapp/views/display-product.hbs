@@ -1,12 +1,14 @@
 <html>
-    <head>
-        <a href="product">New Product</a>
 
-    </head>
+<head>
+    <a href="product">New Product</a>
+
+</head>
+
 <body>
-    
+
     <h1>Display Product Table</h1>
-     <table border='1'>
+    <table border='1'>
         <tr>
             <th>ID</th>
             <th>Product Name</th>
@@ -18,19 +20,20 @@
         </tr>
         {{#each product_array }}
         <tr>
-            {{!-- <td>{{ i+1 }}</td>  --}}
-             <td> {{@index}}</td>
-             <td>{{ p_name  }}</td> 
-             <td>{{ p_details  }} </td> 
-             <td>{{ p_price }}</td>
-             <td><img src="/images/{{p_img}}" style="width: 100px;"></td> 
-             <td>{{ p_qty  }}</td> 
-             <td> <a href="/edit-product/{{_id }}">Edit</a> 
-                 <a href="/delete/{{ _id }}">Delete</a>
-                 <a href="/show/{{ _id }}">Show</a>
-            </td> 
+            {{!-- <td>{{ i+1 }}</td> --}}
+            <td> {{@index}}</td>
+            <td>{{ p_name }}</td>
+            <td>{{ p_details }} </td>
+            <td>{{ p_price }}</td>
+            <td><img src="/images/{{p_img}}" style="width: 100px;"></td>
+            <td>{{ p_qty }}</td>
+            <td> <a href="/edit-product/{{_id }}">Edit</a>
+                <a href="/delete/{{ _id }}">Delete</a>
+                <a href="/show/{{ _id }}">Show</a>
+            </td>
         </tr>
         {{/each}}
-    </table>    
+    </table>
 </body>
+
 </html>
