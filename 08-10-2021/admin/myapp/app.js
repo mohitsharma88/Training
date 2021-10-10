@@ -4,16 +4,21 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const exphbs = require('express-handlebars');
+var {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
+var _handlebars = require('handlebars')
+
+
 
 //MongoDB Connection
 var mongoose = require('mongoose');
-var fileUpload = require('express-fileupload');
-// const nodemailer = require("nodemailer");
-var session = require('express-session')
 
+
+var session = require('express-session')
+const nodemailer = require("nodemailer");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var adminRouter = require('./routes/admin');
+var fileUpload = require('express-fileupload');
 
 
 var app = express();
@@ -23,7 +28,8 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({
-  defaultLayout: 'main'
+  defaultLayout: 'main',
+  handlebars: allowInsecurePrototypeAccess(_handlebars)
 }));
 app.set('view engine', 'handlebars');
 
@@ -42,7 +48,9 @@ app.use(session({ secret: 'keyboard cat', cookie: { maxAge:
 
 //Db Connection Start 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://adminpart:adminpart@localhost:27017/adminpart')
+// mongoose.connect('mongodb://adminpart:adminpart@localhost:27017/adminpart')
+mongoose.connect('mongodb://localhost:27017/adminpart')
+
 .then(()=>console.log("Connection Open"))
 .catch(()=>console.log("Error"))
 //DB Connection End  

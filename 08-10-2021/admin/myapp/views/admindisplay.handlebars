@@ -34,7 +34,7 @@
                                     <th>Email</th>
                                     <th>Password</th>
                                     <th>Admin Image</th>
-                                    <th>Action</th>
+                                    {{!-- <th>Action</th> --}}
                                 </tr>
                                 {{#each data}}
                                 {{!-- {{data.name}} --}}
@@ -44,9 +44,9 @@
                                     <td>{{email}}</td>
                                     <td>{{password}}</td>
                                     <td><img src="/images/{{file}}" style="width: 100px;"></td>
-                                    <td> <a href="/edit-product/{{_id }}">Edit</a>
-                                        <a href="/delete/{{ _id }}">Delete</a>
-                                        <a href="/show/{{ _id }}">Show</a>
+                                    {{!-- <td> <a href="/edit/{{_id }}">Edit</a>
+                                        <a href="/delete-record/{{ _id }}">Delete</a>
+                                        <a href="/show/{{ _id }}">Show</a> --}}
                                     </td>
                                 </tr>
                                 {{/each}}
